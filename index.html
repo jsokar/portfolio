@@ -1,0 +1,1340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="John Sokar, Ph.D. - music educator, flutist, K-12 licensed teacher, former assistant professor, ensemble leader, and music technology specialist.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23111214'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial,sans-serif' font-size='20' font-weight='800' fill='%23fffaf1'%3EJS%3C/text%3E%3C/svg%3E">
+  <title>John Sokar, Ph.D. | Music Educator & Flutist</title>
+  <style>
+    :root {
+      --ink: #111214;
+      --paper: #f7f4ef;
+      --cream: #fffaf1;
+      --charcoal: #191b1f;
+      --stone: #707070;
+      --line: rgba(17, 18, 20, 0.13);
+      --teal: #0b7774;
+      --gold: #bb8b2a;
+      --coral: #b55242;
+      --plum: #5a3d67;
+      --white: #ffffff;
+      --shadow: 0 24px 70px rgba(17, 18, 20, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(17,18,20,0.035) 1px, transparent 1px) 0 0 / 56px 56px,
+        linear-gradient(rgba(17,18,20,0.025) 1px, transparent 1px) 0 0 / 56px 56px,
+        var(--paper);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .page-shell {
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .grain {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      opacity: 0.13;
+      mix-blend-mode: multiply;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(17,18,20,0.16) 0 1px, transparent 1px),
+        radial-gradient(circle at 80% 60%, rgba(17,18,20,0.12) 0 1px, transparent 1px);
+      background-size: 36px 36px, 52px 52px;
+    }
+
+    .nav {
+      position: fixed;
+      left: 50%;
+      top: 18px;
+      z-index: 40;
+      display: flex;
+      width: min(1060px, calc(100% - 28px));
+      height: 58px;
+      transform: translateX(-50%);
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid rgba(255, 255, 255, 0.52);
+      background: rgba(247, 244, 239, 0.78);
+      box-shadow: 0 18px 48px rgba(17, 18, 20, 0.12);
+      backdrop-filter: blur(20px);
+      padding: 0 12px 0 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 760;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      background: var(--charcoal);
+      color: var(--cream);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-links a {
+      display: inline-flex;
+      min-height: 36px;
+      align-items: center;
+      border: 1px solid transparent;
+      padding: 0 11px;
+      color: rgba(17, 18, 20, 0.72);
+      font-size: 13px;
+      font-weight: 680;
+      transition: 180ms ease;
+    }
+
+    .nav-links a:hover {
+      border-color: var(--line);
+      background: rgba(255, 255, 255, 0.56);
+      color: var(--ink);
+    }
+
+    .nav-cta {
+      background: var(--ink) !important;
+      color: var(--cream) !important;
+    }
+
+    .hero {
+      position: relative;
+      display: grid;
+      min-height: 92vh;
+      align-items: end;
+      padding: 116px 24px 48px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(247,244,239,0.97) 0%, rgba(247,244,239,0.78) 43%, rgba(247,244,239,0.24) 72%, rgba(247,244,239,0.56) 100%),
+        url("assets/john-sokar-portrait.jpg") right center / min(55vw, 720px) auto no-repeat;
+      transform: scale(1.02);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: min(42vw, 560px);
+      height: 62vh;
+      background:
+        linear-gradient(135deg, rgba(11,119,116,0.2), transparent 42%),
+        linear-gradient(45deg, transparent 0 48%, rgba(187,139,42,0.26) 48% 52%, transparent 52% 100%);
+      clip-path: polygon(22% 0, 100% 14%, 100% 100%, 0 100%);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: min(1160px, 100%);
+      margin: 0 auto;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 780;
+      text-transform: uppercase;
+    }
+
+    .hero-kicker::before {
+      content: "";
+      width: 42px;
+      height: 2px;
+      background: var(--teal);
+    }
+
+    h1 {
+      max-width: 840px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(56px, 11vw, 142px);
+      font-weight: 500;
+      line-height: 0.88;
+      letter-spacing: 0;
+    }
+
+    .hero-subtitle {
+      max-width: 710px;
+      margin: 28px 0 0;
+      color: rgba(17, 18, 20, 0.78);
+      font-size: clamp(19px, 2.4vw, 30px);
+      line-height: 1.35;
+      font-weight: 500;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.62);
+      padding: 0 18px;
+      font-size: 14px;
+      font-weight: 780;
+      box-shadow: 0 12px 28px rgba(17, 18, 20, 0.08);
+      transition: 180ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .button.primary {
+      border-color: var(--charcoal);
+      background: var(--charcoal);
+      color: var(--cream);
+    }
+
+    .scroll-cue,
+    .continue-cue {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(17, 18, 20, 0.58);
+      font-size: 12px;
+      font-weight: 820;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .scroll-cue {
+      position: absolute;
+      right: 24px;
+      bottom: 24px;
+      z-index: 3;
+      writing-mode: vertical-rl;
+    }
+
+    .scroll-cue::after,
+    .continue-cue::before {
+      content: "";
+      display: block;
+      background: currentColor;
+      opacity: 0.72;
+    }
+
+    .scroll-cue::after {
+      width: 1px;
+      height: 54px;
+      animation: cueDrop 1.8s ease-in-out infinite;
+    }
+
+    .continue-cue {
+      position: absolute;
+      left: 50%;
+      bottom: 24px;
+      transform: translateX(-50%);
+    }
+
+    .continue-cue::before {
+      width: 42px;
+      height: 1px;
+    }
+
+    .dark-band .continue-cue {
+      color: rgba(255, 250, 241, 0.58);
+    }
+
+    @keyframes cueDrop {
+      0%, 100% {
+        transform: translateY(0);
+        opacity: 0.38;
+      }
+
+      50% {
+        transform: translateY(8px);
+        opacity: 0.9;
+      }
+    }
+
+    .icon {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(120px, 1fr));
+      gap: 1px;
+      width: min(860px, 100%);
+      margin-top: 56px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .metric {
+      min-height: 118px;
+      background: rgba(255, 250, 241, 0.78);
+      padding: 20px;
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--charcoal);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 5vw, 54px);
+      font-weight: 500;
+      line-height: 0.96;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 10px;
+      color: rgba(17, 18, 20, 0.66);
+      font-size: 12px;
+      font-weight: 760;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+
+    section {
+      position: relative;
+      padding: 92px 24px;
+    }
+
+    .section-inner {
+      width: min(1160px, 100%);
+      margin: 0 auto;
+    }
+
+    .section-label {
+      color: var(--coral);
+      font-size: 12px;
+      font-weight: 820;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      max-width: 840px;
+      margin: 12px 0 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(36px, 6vw, 76px);
+      font-weight: 500;
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 22px 0 0;
+      color: rgba(17, 18, 20, 0.72);
+      font-size: 19px;
+      line-height: 1.65;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 34px;
+      margin-top: 42px;
+      align-items: start;
+    }
+
+    .statement {
+      border-left: 5px solid var(--teal);
+      background: var(--cream);
+      box-shadow: var(--shadow);
+      padding: clamp(24px, 4vw, 48px);
+    }
+
+    .statement p {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(25px, 3.2vw, 42px);
+      line-height: 1.18;
+    }
+
+    .pill-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .pill {
+      min-height: 104px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.58);
+      padding: 18px;
+    }
+
+    .pill b {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .pill span {
+      color: rgba(17, 18, 20, 0.66);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .dark-band {
+      background:
+        linear-gradient(135deg, rgba(90,61,103,0.3), transparent 34%),
+        linear-gradient(180deg, #17181c, #23201e);
+      color: var(--cream);
+    }
+
+    .dark-band .lead,
+    .dark-band .section-label {
+      color: rgba(255, 250, 241, 0.72);
+    }
+
+    .timeline {
+      display: grid;
+      gap: 1px;
+      margin-top: 46px;
+      background: rgba(255, 250, 241, 0.14);
+      border: 1px solid rgba(255, 250, 241, 0.14);
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 26px;
+      background: rgba(255, 250, 241, 0.055);
+      padding: 28px;
+    }
+
+    .timeline-time {
+      color: #d4ae5b;
+      font-weight: 820;
+    }
+
+    .timeline-item h3 {
+      margin: 0;
+      font-size: clamp(21px, 2vw, 28px);
+      letter-spacing: 0;
+    }
+
+    .timeline-item p {
+      max-width: 750px;
+      margin: 10px 0 0;
+      color: rgba(255, 250, 241, 0.68);
+      line-height: 1.58;
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 42px;
+    }
+
+    .expertise-card {
+      min-height: 250px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.62);
+      padding: 24px;
+      transition: 180ms ease;
+    }
+
+    .expertise-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .expertise-card .number {
+      display: inline-grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      margin-bottom: 24px;
+      background: var(--charcoal);
+      color: var(--cream);
+      font-weight: 820;
+    }
+
+    .expertise-card h3 {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+
+    .expertise-card p {
+      margin: 12px 0 0;
+      color: rgba(17, 18, 20, 0.68);
+      line-height: 1.58;
+    }
+
+    .split-band {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .credential-panel {
+      position: sticky;
+      top: 100px;
+      border: 1px solid var(--line);
+      background: var(--cream);
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .credential-panel h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      font-weight: 500;
+      line-height: 1.05;
+    }
+
+    .credential-panel p {
+      color: rgba(17, 18, 20, 0.66);
+      line-height: 1.55;
+    }
+
+    .credential-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .credential {
+      border-top: 1px solid var(--line);
+      padding: 22px 0 8px;
+    }
+
+    .credential b {
+      display: block;
+      font-size: 19px;
+    }
+
+    .credential span {
+      display: block;
+      margin-top: 6px;
+      color: rgba(17, 18, 20, 0.64);
+      line-height: 1.5;
+    }
+
+    .canvas-wrap {
+      position: relative;
+      min-height: 360px;
+      margin-top: 46px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 250, 241, 0.16);
+      background:
+        linear-gradient(90deg, rgba(255,250,241,0.055) 1px, transparent 1px) 0 0 / 44px 44px,
+        rgba(255, 250, 241, 0.04);
+    }
+
+    #scoreCanvas {
+      width: 100%;
+      height: 360px;
+    }
+
+    .canvas-caption {
+      position: absolute;
+      left: 22px;
+      bottom: 22px;
+      max-width: 460px;
+      color: rgba(255, 250, 241, 0.72);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 42px;
+    }
+
+    .doc-card {
+      display: flex;
+      min-height: 180px;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.6);
+      padding: 22px;
+      color: inherit;
+      cursor: pointer;
+      font: inherit;
+      text-align: left;
+      transition: 180ms ease;
+    }
+
+    .doc-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .doc-card b {
+      font-size: 20px;
+    }
+
+    .doc-card span {
+      margin-top: 10px;
+      color: rgba(17, 18, 20, 0.64);
+      line-height: 1.5;
+    }
+
+    .doc-card small {
+      margin-top: 22px;
+      color: var(--teal);
+      font-weight: 820;
+      text-transform: uppercase;
+    }
+
+    .modal-layer {
+      position: fixed;
+      inset: 0;
+      z-index: 80;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(17, 18, 20, 0.72);
+      padding: 22px;
+      backdrop-filter: blur(14px);
+    }
+
+    .modal-layer.active {
+      display: flex;
+    }
+
+    .modal-dialog {
+      width: min(780px, 100%);
+      max-height: min(760px, calc(100vh - 44px));
+      overflow: auto;
+      border: 1px solid rgba(255, 250, 241, 0.36);
+      background: var(--cream);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid var(--line);
+      padding: 22px 24px;
+    }
+
+    .modal-header h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 500;
+      line-height: 1.05;
+    }
+
+    .modal-close {
+      display: inline-grid;
+      width: 42px;
+      height: 42px;
+      flex: 0 0 auto;
+      place-items: center;
+      border: 1px solid var(--line);
+      background: var(--charcoal);
+      color: var(--cream);
+      cursor: pointer;
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .modal-body {
+      display: grid;
+      gap: 18px;
+      padding: 24px;
+    }
+
+    .modal-body p,
+    .modal-body li {
+      color: rgba(17, 18, 20, 0.72);
+      line-height: 1.62;
+    }
+
+    .modal-body p {
+      margin: 0;
+    }
+
+    .modal-body ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .modal-highlight {
+      border-left: 4px solid var(--teal);
+      background: rgba(11, 119, 116, 0.08);
+      padding: 16px 18px;
+      color: var(--ink);
+      font-weight: 760;
+      line-height: 1.52;
+    }
+
+    .contact {
+      padding-bottom: 40px;
+    }
+
+    .contact-panel {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 1px;
+      overflow: hidden;
+      background: rgba(255, 250, 241, 0.16);
+      border: 1px solid rgba(255, 250, 241, 0.16);
+    }
+
+    .contact-copy,
+    .contact-links {
+      background: rgba(255, 250, 241, 0.055);
+      padding: clamp(26px, 5vw, 54px);
+    }
+
+    .contact-links {
+      display: grid;
+      align-content: center;
+      gap: 16px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      min-height: 54px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid rgba(255, 250, 241, 0.16);
+      background: var(--cream);
+      padding: 0 18px;
+      color: var(--charcoal);
+      font-weight: 820;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.16);
+      transition: 180ms ease;
+    }
+
+    .contact-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 24px 54px rgba(0, 0, 0, 0.22);
+    }
+
+    .contact-note {
+      margin: 0;
+      color: var(--cream);
+      line-height: 1.55;
+      opacity: 0.7;
+    }
+
+    footer {
+      padding: 28px 24px 54px;
+      color: rgba(17, 18, 20, 0.58);
+      font-size: 13px;
+    }
+
+    footer .section-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 700ms ease, transform 700ms ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 900px) {
+      .nav {
+        top: 10px;
+      }
+
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 430px;
+      }
+
+      .hero::before {
+        background:
+          linear-gradient(180deg, rgba(247,244,239,0.12) 0%, rgba(247,244,239,0.62) 48%, rgba(247,244,239,1) 74%),
+          url("assets/john-sokar-portrait.jpg") top center / min(100vw, 520px) auto no-repeat;
+      }
+
+      .hero::after {
+        display: none;
+      }
+
+      .hero-metrics,
+      .feature-grid,
+      .expertise-grid,
+      .split-band,
+      .doc-grid,
+      .contact-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .credential-panel {
+        position: static;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .brand > span:not(.brand-mark) {
+        display: none;
+      }
+
+      .hero {
+        padding: 380px 18px 34px;
+      }
+
+      section {
+        padding: 70px 18px;
+      }
+
+      .hero-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .pill-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 22px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .scroll-cue {
+        right: 18px;
+        bottom: 18px;
+      }
+
+      .continue-cue {
+        bottom: 18px;
+      }
+
+      footer .section-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <div class="grain"></div>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="John Sokar home">
+        <span class="brand-mark">JS</span>
+        <span>John Sokar, Ph.D.</span>
+      </a>
+      <div class="nav-links">
+        <a href="#profile">Profile</a>
+        <a href="#experience">Experience</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#documents">Details</a>
+        <a class="nav-cta" href="mailto:jsokar@wcpss.net?subject=Portfolio%20inquiry">Contact</a>
+      </div>
+    </nav>
+
+    <header class="hero" id="top">
+      <div class="hero-inner reveal">
+        <div class="hero-kicker">Music educator - flutist - curriculum builder</div>
+        <h1>John Sokar, Ph.D.</h1>
+        <p class="hero-subtitle">A cross-cultural music educator connecting rigorous pedagogy, expressive performance, classroom belonging, and modern music technology.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="mailto:jsokar@wcpss.net?subject=Portfolio%20inquiry">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2"/></svg>
+            Email John
+          </a>
+          <button class="button" type="button" data-modal="resume">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 3h9l3 3v15H6V3Z" stroke="currentColor" stroke-width="2"/><path d="M9 11h6M9 15h6M9 7h3" stroke="currentColor" stroke-width="2"/></svg>
+            Resume highlights
+          </button>
+        </div>
+        <div class="hero-metrics" aria-label="Career highlights">
+          <div class="metric"><strong>20+</strong><span>years in music education</span></div>
+          <div class="metric"><strong>3</strong><span>countries of teaching experience</span></div>
+          <div class="metric"><strong>K-12</strong><span>North Carolina music license</span></div>
+          <div class="metric"><strong>Ph.D.</strong><span>music education and pedagogy</span></div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#profile" aria-label="Scroll to professional profile">Scroll</a>
+    </header>
+
+    <main>
+      <section id="profile">
+        <div class="section-inner">
+          <div class="section-label reveal">Professional profile</div>
+          <h2 class="reveal">A musician-scholar with classroom range, university depth, and production fluency.</h2>
+          <p class="lead reveal">John Sokar is a music educator and flutist based in North Carolina. His work spans elementary general music, applied flute instruction, ensemble leadership, curriculum development, music technology, live sound, and cross-cultural pedagogy.</p>
+
+          <div class="feature-grid">
+            <div class="statement reveal">
+              <p>He teaches music as a disciplined craft and a human language: structured, creative, reflective, and accessible to students from many backgrounds.</p>
+            </div>
+            <div class="pill-grid reveal">
+              <div class="pill"><b>Current work</b><span>Music Teacher with Wake County Public School System, including Jones Dairy Elementary School and Reedy Creek Elementary School.</span></div>
+              <div class="pill"><b>Higher education</b><span>Former Assistant Professor and University Lecturer at Helwan University, teaching flute performance and leading woodwind work.</span></div>
+              <div class="pill"><b>Applied artistry</b><span>Flute pedagogy, performance preparation, tone production, stylistic awareness, and expressive performance.</span></div>
+              <div class="pill"><b>Creative technology</b><span>Logic Pro X, Ableton Live, Cakewalk Sonar, Sibelius, MuseScore, audio systems, recording, and sound engineering.</span></div>
+            </div>
+          </div>
+        </div>
+        <a class="continue-cue" href="#experience" aria-label="Continue to experience">Continue</a>
+      </section>
+
+      <section class="dark-band" id="experience">
+        <div class="section-inner">
+          <div class="section-label reveal">Experience arc</div>
+          <h2 class="reveal">From university studios to elementary classrooms, the through-line is student growth.</h2>
+          <p class="lead reveal">John's career combines public school teaching, university-level instruction, performance leadership, music and arts coordination, and technical production support.</p>
+
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <div class="timeline-time">2023 - Present</div>
+              <div>
+                <h3>Music Teacher, Jones Dairy Elementary School</h3>
+                <p>Teaches general music, leads performances, integrates Orff-based instruction, and supports school-wide arts initiatives within Wake County Public School System.</p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-time">2015 - 2023</div>
+              <div>
+                <h3>Music Teacher, Durham and Wake County Schools</h3>
+                <p>Delivered comprehensive music instruction, directed productions and concerts, supported arts integration, and brought creative tools into the classroom.</p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-time">2005 - 2014</div>
+              <div>
+                <h3>Assistant Professor, Faculty of Music Education, Helwan University</h3>
+                <p>Taught undergraduate and graduate flute performance, conducted ensembles, developed curriculum, assessed performance work, and supervised research projects.</p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-time">2006 - 2014</div>
+              <div>
+                <h3>Music and Arts Coordinator, Private German School Cairo</h3>
+                <p>Expanded curriculum and resources, directed choir, band, Orff ensembles, school events, acoustic improvements, technical support, and design materials.</p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-time">1995 - 2001</div>
+              <div>
+                <h3>University Lecturer and Orchestral Flutist</h3>
+                <p>Taught flute at Helwan University and performed as a flute player with Cairo Opera House Orchestra productions.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="canvas-wrap reveal" aria-label="Animated music staff visualization">
+            <canvas id="scoreCanvas"></canvas>
+            <div class="canvas-caption">Pedagogy, performance, and technology move together: listening, structure, creativity, and reflection as one learning system.</div>
+          </div>
+        </div>
+        <a class="continue-cue" href="#expertise" aria-label="Continue to expertise">Continue</a>
+      </section>
+
+      <section id="expertise">
+        <div class="section-inner">
+          <div class="section-label reveal">Expertise</div>
+          <h2 class="reveal">Built for classrooms, studios, ensembles, and creative learning spaces.</h2>
+          <div class="expertise-grid">
+            <article class="expertise-card reveal">
+              <div class="number">01</div>
+              <h3>General music and Orff-based instruction</h3>
+              <p>Developmentally appropriate K-12 teaching with performance experiences, movement, instruments, listening, and student-centered engagement.</p>
+            </article>
+            <article class="expertise-card reveal">
+              <div class="number">02</div>
+              <h3>Flute pedagogy and performance</h3>
+              <p>Applied flute instruction focused on sound, technique, practice design, musical interpretation, and confident performance preparation.</p>
+            </article>
+            <article class="expertise-card reveal">
+              <div class="number">03</div>
+              <h3>Music technology and sound</h3>
+              <p>DAWs, notation software, live audio systems, recording workflows, sound engineering, and classroom technology used in service of musical goals.</p>
+            </article>
+            <article class="expertise-card reveal">
+              <div class="number">04</div>
+              <h3>Curriculum and assessment</h3>
+              <p>University and school-based curriculum development, examinations, performance evaluation, degree requirements, and quality assurance participation.</p>
+            </article>
+            <article class="expertise-card reveal">
+              <div class="number">05</div>
+              <h3>Cross-cultural education</h3>
+              <p>Teaching experience across Germany, Egypt, and the United States, with a deep respect for cultural context and inclusive learning environments.</p>
+            </article>
+            <article class="expertise-card reveal">
+              <div class="number">06</div>
+              <h3>Ensemble and event leadership</h3>
+              <p>Choir, band, woodwind ensemble, school productions, liturgical/community performance, concert planning, and technical event support.</p>
+            </article>
+          </div>
+        </div>
+        <a class="continue-cue" href="#credentials" aria-label="Continue to credentials">Continue</a>
+      </section>
+
+      <section id="credentials">
+        <div class="section-inner split-band">
+          <aside class="credential-panel reveal">
+            <h3>Credentials with both academic depth and classroom authority.</h3>
+            <p>John's record brings together doctoral study, international university teaching, public school licensing, research, and sustained professional development.</p>
+            <button class="button primary" type="button" data-modal="license">View license summary</button>
+          </aside>
+          <div class="credential-list">
+            <div class="credential reveal">
+              <b>Ph.D. in Music Education</b>
+              <span>University of Music, Drama, and Media, Hanover, Germany. Dissertation: "The Modern German School of Flute Pedagogy: A Cross-Cultural Investigation."</span>
+            </div>
+            <div class="credential reveal">
+              <b>Master of Music Education, Flute Performance</b>
+              <span>Faculty of Music Education, Helwan University, Cairo, Egypt. U.S. equivalence: Master's degree in Music Education.</span>
+            </div>
+            <div class="credential reveal">
+              <b>Bachelor of Music Education</b>
+              <span>Faculty of Music Education, Helwan University, Cairo, Egypt. U.S. equivalence: Bachelor's degree in Music Education.</span>
+            </div>
+            <div class="credential reveal">
+              <b>North Carolina Professional Educator License</b>
+              <span>Continuing License, Music K-12. Current renewal cycle effective July 1, 2026 through June 30, 2031.</span>
+            </div>
+            <div class="credential reveal">
+              <b>Professional development</b>
+              <span>Music wellness, educational technology, creativity in music education, intercultural family collaboration, quality assurance, audiovisual media, electronic instruments, gamelan, and sound engineering.</span>
+            </div>
+          </div>
+        </div>
+        <a class="continue-cue" href="#documents" aria-label="Continue to details">Continue</a>
+      </section>
+
+      <section id="documents">
+        <div class="section-inner">
+          <div class="section-label reveal">Portfolio details</div>
+          <h2 class="reveal">Important information, shared without public PDF files.</h2>
+          <p class="lead reveal">For privacy, the public site does not publish resume, license, reference, certificate, or cover-letter PDFs. The essential information is summarized here in readable detail panels.</p>
+          <div class="doc-grid">
+            <button class="doc-card reveal" type="button" data-modal="resume">
+              <b>Resume highlights</b>
+              <span>Current polished resume with profile, education, experience, professional development, and technology skills.</span>
+              <small>Open details</small>
+            </button>
+            <button class="doc-card reveal" type="button" data-modal="portfolio">
+              <b>Teaching portfolio</b>
+              <span>Professional overview, teaching philosophy, applied instruction focus, research interests, and scholarly work.</span>
+              <small>Open details</small>
+            </button>
+            <button class="doc-card reveal" type="button" data-modal="philosophy">
+              <b>Teaching philosophy</b>
+              <span>Student-centered learning, creativity, cross-cultural pedagogy, technology, and research focus areas.</span>
+              <small>Open details</small>
+            </button>
+            <button class="doc-card reveal" type="button" data-modal="license">
+              <b>NC educator license</b>
+              <span>Public summary of the Music K-12 license, without posting the credential PDF.</span>
+              <small>Open details</small>
+            </button>
+            <button class="doc-card reveal" type="button" data-modal="technology">
+              <b>Technology and sound</b>
+              <span>Music production, notation, live sound, classroom technology, and audiovisual media background.</span>
+              <small>Open details</small>
+            </button>
+            <button class="doc-card reveal" type="button" data-modal="development">
+              <b>Professional development</b>
+              <span>Selected training in wellness, creativity, intercultural collaboration, quality assurance, and sound engineering.</span>
+              <small>Open details</small>
+            </button>
+          </div>
+        </div>
+        <a class="continue-cue" href="#contact" aria-label="Continue to contact">Continue</a>
+      </section>
+
+      <section class="dark-band contact" id="contact">
+        <div class="section-inner contact-panel reveal">
+          <div class="contact-copy">
+            <div class="section-label">Contact</div>
+            <h2>For schools, universities, music programs, and creative education work.</h2>
+            <p class="lead">Based in North Carolina. Please use the work email for school, university, music program, and creative education inquiries.</p>
+          </div>
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:jsokar@wcpss.net?subject=Portfolio%20inquiry">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2"/></svg>
+              Write an email
+            </a>
+            <p class="contact-note">Opens your email app addressed to the Wake County Public School System email.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal-layer" id="modalLayer" aria-hidden="true">
+      <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-header">
+          <h3 id="modalTitle"></h3>
+          <button class="modal-close" type="button" aria-label="Close details">x</button>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="section-inner">
+        <span>John Sokar, Ph.D. - Music Educator and Flutist</span>
+        <span>Portfolio landing page built from local resume, portfolio, license, and teaching materials.</span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.16 });
+
+    document.querySelectorAll(".reveal").forEach((item) => revealObserver.observe(item));
+
+    const modalContent = {
+      resume: {
+        title: "Resume Highlights",
+        body: `
+          <div class="modal-highlight">John Sokar, Ph.D. is a North Carolina-based music educator and flutist with more than twenty years of experience in higher education and school-based instruction.</div>
+          <ul>
+            <li>Current Music Teacher with Wake County Public School System, including Jones Dairy Elementary School and Reedy Creek Elementary School.</li>
+            <li>Former Music Teacher with Durham Public Schools at Mangum Elementary School.</li>
+            <li>Former Assistant Professor and University Lecturer in the Performance Department at the Faculty of Music Education, Helwan University, Cairo.</li>
+            <li>Experience teaching applied flute to undergraduate and graduate students, conducting ensembles, developing curriculum, and assessing performance work.</li>
+            <li>Professional work includes general music, Orff-based instruction, choir, band, woodwind ensembles, school productions, live sound, and music technology.</li>
+          </ul>`
+      },
+      portfolio: {
+        title: "Teaching Portfolio",
+        body: `
+          <p>John's portfolio centers on applied flute instruction, music pedagogy, ensemble leadership, curriculum development, and music technology, informed by teaching experience in Germany, Egypt, and the United States.</p>
+          <ul>
+            <li>Applied instruction focus: tone production, sound quality, technique, expressive performance, efficient practice habits, and performance confidence.</li>
+            <li>University teaching: undergraduate and graduate flute performance, woodwind ensemble leadership, curriculum planning, examinations, and student research supervision.</li>
+            <li>K-12 teaching: developmentally appropriate general music instruction, performances, Orff-based instruments, creative classroom tools, and school-wide arts initiatives.</li>
+          </ul>`
+      },
+      philosophy: {
+        title: "Teaching Philosophy",
+        body: `
+          <p>John's teaching philosophy places students at the center of the learning process. He balances structure with discovery, technical skill with creativity, and clear expectations with inclusive support.</p>
+          <ul>
+            <li>Students learn best through active engagement, reflection, musical exploration, and opportunities for self-expression.</li>
+            <li>Instruction adapts to varied backgrounds, learning styles, and levels of preparation while maintaining academic rigor.</li>
+            <li>Technology is used thoughtfully to support listening, analysis, composition, reflection, and musical goals.</li>
+            <li>Cross-cultural teaching experience shapes a respectful classroom environment for diverse learners.</li>
+          </ul>`
+      },
+      license: {
+        title: "Educator License Summary",
+        body: `
+          <div class="modal-highlight">North Carolina Professional Educator License: Music K-12.</div>
+          <ul>
+            <li>License area: Music K-12.</li>
+            <li>Status: Continuing License.</li>
+            <li>Current renewal cycle listed in local records: July 1, 2026 through June 30, 2031.</li>
+            <li>This public page summarizes the credential without publishing the original license PDF.</li>
+          </ul>`
+      },
+      technology: {
+        title: "Technology and Sound",
+        body: `
+          <p>John brings a practical blend of classroom technology, music production, notation, and live audio experience.</p>
+          <ul>
+            <li>Digital audio and production: Logic Pro X, Ableton Live, Cakewalk Sonar, WaveLab, and Sound Forge.</li>
+            <li>Notation and music learning tools: Sibelius, MuseScore, and creative classroom technology.</li>
+            <li>Live sound and systems: sound engineering, recording, audio mixing, school event technical support, and analog/digital mixers.</li>
+            <li>Creative media: graphic design, audiovisual media, school programs, certificates, invitations, and performance materials.</li>
+          </ul>`
+      },
+      development: {
+        title: "Professional Development",
+        body: `
+          <ul>
+            <li>Music for Wellness: An Integrative Approach, Berklee College of Music.</li>
+            <li>Technology in Education professional development.</li>
+            <li>Developing Creativity in the Music Education Process.</li>
+            <li>Intercultural collaboration with families through ZfA Deutsche Auslandsschularbeit.</li>
+            <li>Quality Assurance in Higher Education workshop.</li>
+            <li>Composing for Electronic Instruments, audiovisual media, Javanese gamelan, Asian and African string instruments, and sound engineering.</li>
+          </ul>`
+      }
+    };
+
+    const modalLayer = document.getElementById("modalLayer");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalBody = document.getElementById("modalBody");
+    const modalClose = document.querySelector(".modal-close");
+
+    function openModal(id) {
+      const content = modalContent[id];
+      if (!content) return;
+      modalTitle.textContent = content.title;
+      modalBody.innerHTML = content.body;
+      modalLayer.classList.add("active");
+      modalLayer.setAttribute("aria-hidden", "false");
+      modalClose.focus();
+    }
+
+    function closeModal() {
+      modalLayer.classList.remove("active");
+      modalLayer.setAttribute("aria-hidden", "true");
+    }
+
+    document.querySelectorAll("[data-modal]").forEach((button) => {
+      button.addEventListener("click", () => openModal(button.dataset.modal));
+    });
+
+    modalClose.addEventListener("click", closeModal);
+    modalLayer.addEventListener("click", (event) => {
+      if (event.target === modalLayer) closeModal();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && modalLayer.classList.contains("active")) closeModal();
+    });
+
+    const canvas = document.getElementById("scoreCanvas");
+    const ctx = canvas.getContext("2d");
+    let width = 0;
+    let height = 0;
+    let time = 0;
+
+    function resizeCanvas() {
+      const rect = canvas.getBoundingClientRect();
+      const ratio = Math.min(window.devicePixelRatio || 1, 2);
+      width = rect.width;
+      height = rect.height;
+      canvas.width = Math.floor(width * ratio);
+      canvas.height = Math.floor(height * ratio);
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    }
+
+    function draw() {
+      time += 0.008;
+      ctx.clearRect(0, 0, width, height);
+      ctx.lineCap = "round";
+
+      for (let staff = 0; staff < 4; staff += 1) {
+        const top = 58 + staff * 66;
+        ctx.strokeStyle = "rgba(255, 250, 241, 0.16)";
+        ctx.lineWidth = 1;
+        for (let line = 0; line < 5; line += 1) {
+          ctx.beginPath();
+          ctx.moveTo(28, top + line * 9);
+          ctx.lineTo(width - 28, top + line * 9);
+          ctx.stroke();
+        }
+      }
+
+      const colors = ["rgba(212,174,91,0.95)", "rgba(87,178,170,0.86)", "rgba(230,128,104,0.8)"];
+      for (let i = 0; i < 28; i += 1) {
+        const x = 48 + ((i * 97 + time * 120) % Math.max(width - 80, 1));
+        const y = 74 + Math.sin(time * 2.2 + i * 0.82) * 42 + (i % 4) * 66;
+        ctx.fillStyle = colors[i % colors.length];
+        ctx.beginPath();
+        ctx.ellipse(x, y, 8, 6, -0.32, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.strokeStyle = colors[i % colors.length];
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(x + 7, y - 3);
+        ctx.lineTo(x + 7, y - 42);
+        ctx.stroke();
+      }
+
+      ctx.strokeStyle = "rgba(255, 250, 241, 0.44)";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      for (let x = 0; x <= width; x += 8) {
+        const y = height * 0.48 + Math.sin(x * 0.018 + time * 4) * 22 + Math.sin(x * 0.006 - time * 7) * 14;
+        if (x === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+
+      requestAnimationFrame(draw);
+    }
+
+    resizeCanvas();
+    draw();
+    window.addEventListener("resize", resizeCanvas);
+  </script>
+</body>
+</html>
