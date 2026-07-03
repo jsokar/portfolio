@@ -48,7 +48,7 @@ next-env.d.ts
 # local platform metadata and generated indexes
 /.openai/
 /.codebase-memory/
-Icon
+Icon*
 
 # unused app scaffold kept locally from hosting attempt
 /app/
