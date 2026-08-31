@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Photo Gallery & Biographical Milestones of Dr. John Sokar, Ph.D. - Classroom music teaching, live sound engineering, concert performances, school assemblies, and family milestones.">
-  <title>Photo Gallery & Life | Dr. John Sokar, Ph.D.</title>
+  <meta name="description" content="Professional Gallery of Dr. John Sokar, Ph.D. - Classroom music teaching, live sound engineering, concert performances, and school assemblies.">
+  <title>Professional Gallery | Dr. John Sokar, Ph.D.</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
     }
 
     .gallery-filter-btn {
-      padding: 8px 16px;
+      padding: 8px 18px;
       border-radius: var(--radius-full);
       font-size: 0.82rem;
       font-weight: 600;
@@ -46,7 +46,7 @@
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 22px;
     }
 
     .gallery-card {
@@ -89,7 +89,7 @@
     }
 
     .gallery-meta {
-      padding: 16px 20px;
+      padding: 18px 20px;
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -97,7 +97,7 @@
     }
 
     .gallery-caption {
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       font-weight: 600;
       color: var(--text-primary);
       margin-bottom: 6px;
@@ -108,7 +108,7 @@
       font-size: 0.85rem;
       color: var(--text-secondary);
       line-height: 1.5;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .gallery-tag {
@@ -142,7 +142,7 @@
     }
 
     .lightbox-content {
-      max-width: 860px;
+      max-width: 880px;
       max-height: 90vh;
       position: relative;
       background: var(--bg-surface);
@@ -162,13 +162,13 @@
     }
 
     .lightbox-meta {
-      padding: 16px 20px;
+      padding: 16px 22px;
       background: var(--bg-card);
       border-top: 1px solid var(--border-subtle);
     }
 
     .lightbox-title {
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-weight: 600;
       color: var(--text-primary);
       margin-bottom: 4px;
@@ -251,12 +251,12 @@
   <section class="page-header-section">
     <div class="container">
       <div class="breadcrumb">
-        <a href="index.html">Home</a> <span>/</span> <span>Photo Gallery & Life</span>
+        <a href="index.html">Home</a> <span>/</span> <span>Professional Gallery</span>
       </div>
-      <div class="section-eyebrow">Biographical Journey & Active Pedagogy</div>
-      <h1 class="page-title">Photo Gallery & Highlights</h1>
+      <div class="section-eyebrow">Visual Evidence & Active Pedagogy</div>
+      <h1 class="page-title">Professional Gallery</h1>
       <p class="page-subtitle">
-        Authentic photographic record of Dr. Sokar's classroom teaching, live sound engineering, school assemblies, theatre productions, and community life in North Carolina.
+        Curated photographic record of Dr. Sokar's classroom music instruction, live sound engineering, school assemblies, and concert performances.
       </p>
     </div>
   </section>
@@ -266,17 +266,15 @@
     <div class="container">
       <!-- Filter Buttons -->
       <div class="gallery-filter-bar">
-        <button class="gallery-filter-btn active" type="button" data-filter="all">All Photos</button>
+        <button class="gallery-filter-btn active" type="button" data-filter="all">All Highlights</button>
         <button class="gallery-filter-btn" type="button" data-filter="sound">Sound Engineering & Tech</button>
-        <button class="gallery-filter-btn" type="button" data-filter="teaching">Classroom & Schools</button>
-        <button class="gallery-filter-btn" type="button" data-filter="arts">Concerts & Theatre</button>
-        <button class="gallery-filter-btn" type="button" data-filter="academic">Academic & Milestones</button>
-        <button class="gallery-filter-btn" type="button" data-filter="life">Family & Community</button>
+        <button class="gallery-filter-btn" type="button" data-filter="teaching">Classroom & School Leadership</button>
+        <button class="gallery-filter-btn" type="button" data-filter="concerts">Concerts & Performing Arts</button>
       </div>
 
       <div class="gallery-grid">
         <!-- 1. Live Sound Engineering (IMG_4798_2) -->
-        <div class="gallery-card" data-category="sound" onclick="openLightbox('assets/gallery/img_4798_2.jpg', 'Live Sound Mixing & Audio Engineering', 'Dr. Sokar actively managing live sound mixing, audio routing, and acoustic calibration using AKG studio headphones, laptop DAW, tablet digital console, and rack hardware.')">
+        <div class="gallery-card" data-category="sound" onclick="openLightbox('assets/gallery/img_4798_2.jpg', 'Live Sound Mixing & Audio Engineering', 'Dr. Sokar actively engineering live audio reinforcement, signal routing, and acoustic calibration using AKG studio reference headphones, laptop DAW, tablet digital console, and rack hardware.')">
           <div class="gallery-img-wrap">
             <img src="assets/gallery/img_4798_2.jpg" alt="Dr. Sokar Live Sound Engineering" loading="lazy">
           </div>
@@ -290,21 +288,21 @@
         </div>
 
         <!-- 2. Music Technology Lab in Classroom (IMG_3706_2) -->
-        <div class="gallery-card" data-category="sound teaching" onclick="openLightbox('assets/gallery/img_3706_2.jpg', 'Digital Music Tech Lab in the Classroom', 'Students actively engaged in digital music technology lessons with headphones and laptops in Dr. Sokar\'s classroom.')">
+        <div class="gallery-card" data-category="sound teaching" onclick="openLightbox('assets/gallery/img_3706_2.jpg', 'Classroom Music Technology Lab', 'Elementary students actively engaged in digital audio workstation and music technology lessons with headphones and laptops.')">
           <div class="gallery-img-wrap">
             <img src="assets/gallery/img_3706_2.jpg" alt="Music Technology Classroom Lab" loading="lazy">
           </div>
           <div class="gallery-meta">
             <div>
               <div class="gallery-caption">Classroom Music Technology Lab</div>
-              <p class="gallery-desc">Engaging elementary students with headphone-equipped digital audio workstations and interactive music technology software.</p>
+              <p class="gallery-desc">Engaging elementary students with headphone-equipped digital audio workstations and interactive music software.</p>
             </div>
             <span class="gallery-tag">Music Technology</span>
           </div>
         </div>
 
         <!-- 3. Jones Dairy Elementary School Assembly (IMG_3859_2) -->
-        <div class="gallery-card" data-category="teaching arts" onclick="openLightbox('assets/gallery/img_3859_2.jpg', 'Jones Dairy Elementary School Assembly', 'The full student body gathered in the auditorium under the JDE banner for an interactive cultural music and arts performance.')">
+        <div class="gallery-card" data-category="teaching concerts" onclick="openLightbox('assets/gallery/img_3859_2.jpg', 'Jones Dairy Elementary School Assembly', 'The full student body gathered in the auditorium under the JDE banner for an interactive cultural music and arts performance.')">
           <div class="gallery-img-wrap">
             <img src="assets/gallery/img_3859_2.jpg" alt="Jones Dairy Elementary School Assembly" loading="lazy">
           </div>
@@ -313,40 +311,26 @@
               <div class="gallery-caption">Jones Dairy Elementary Assembly</div>
               <p class="gallery-desc">School-wide arts assembly and cultural music performance in the Jones Dairy Elementary (JDE) auditorium.</p>
             </div>
-            <span class="gallery-tag">Classroom & Schools</span>
+            <span class="gallery-tag">School Leadership</span>
           </div>
         </div>
 
         <!-- 4. Music Classroom with Teaching Displays (IMG_1772) -->
-        <div class="gallery-card" data-category="teaching" onclick="openLightbox('assets/gallery/img_1772.jpg', 'In the Music Education Classroom', 'Dr. Sokar in the active music classroom equipped with digital keyboards, grand staff wall banner, and interactive teaching displays.')">
+        <div class="gallery-card" data-category="teaching" onclick="openLightbox('assets/gallery/img_1772.jpg', 'In the Music Education Classroom', 'Dr. Sokar in the active music classroom equipped with digital keyboards, grand staff wall banner, and interactive instructional displays.')">
           <div class="gallery-img-wrap">
             <img src="assets/gallery/img_1772.jpg" alt="Music Education Classroom" loading="lazy">
           </div>
           <div class="gallery-meta">
             <div>
               <div class="gallery-caption">In the Music Education Classroom</div>
-              <p class="gallery-desc">Inside the public school music room featuring keyboard stations, Orff instrumentarium, and interactive instructional technology.</p>
+              <p class="gallery-desc">Inside the public school music room featuring keyboard stations, Orff instrumentarium, and interactive instructional displays.</p>
             </div>
-            <span class="gallery-tag">Classroom & Schools</span>
+            <span class="gallery-tag">Classroom Instruction</span>
           </div>
         </div>
 
-        <!-- 5. Mangum Elementary Educator (IMG_5910) -->
-        <div class="gallery-card" data-category="teaching" onclick="openLightbox('assets/gallery/img_5910.jpg', 'Durham Public Schools Educator', 'Dr. Sokar serving as Music Teacher at Mangum Elementary School in Bahama, North Carolina.')">
-          <div class="gallery-img-wrap">
-            <img src="assets/gallery/img_5910.jpg" alt="Mangum Elementary School Music Teacher" loading="lazy">
-          </div>
-          <div class="gallery-meta">
-            <div>
-              <div class="gallery-caption">Durham Public Schools Educator</div>
-              <p class="gallery-desc">Serving as Music Teacher at Mangum Elementary School (Bahama, NC), delivering general music and student performance productions.</p>
-            </div>
-            <span class="gallery-tag">Classroom & Schools</span>
-          </div>
-        </div>
-
-        <!-- 6. Educational Collaboration & Faculty (IMG_0251) -->
-        <div class="gallery-card" data-category="teaching" onclick="openLightbox('assets/gallery/img_0251.jpg', 'Educational Collaboration on Campus', 'Collaborating with school leadership and academic colleagues on campus arts initiatives.')">
+        <!-- 5. Educational Collaboration & Faculty (IMG_0251) -->
+        <div class="gallery-card" data-category="teaching" onclick="openLightbox('assets/gallery/img_0251.jpg', 'Educational Collaboration on Campus', 'Collaborating with school leadership and academic colleagues on campus arts initiatives at Jones Dairy Elementary.')">
           <div class="gallery-img-wrap">
             <img src="assets/gallery/img_0251.jpg" alt="School Leadership and Faculty Colleague" loading="lazy">
           </div>
@@ -355,11 +339,11 @@
               <div class="gallery-caption">Educational Collaboration</div>
               <p class="gallery-desc">Working alongside school leadership and teaching faculty on school-wide arts initiatives at Jones Dairy Elementary.</p>
             </div>
-            <span class="gallery-tag">Classroom & Schools</span>
+            <span class="gallery-tag">School Leadership</span>
           </div>
         </div>
 
-        <!-- 7. Studio Workspace & Desk (IMG_3717_2) -->
+        <!-- 6. Studio Workspace & Desk (IMG_3717_2) -->
         <div class="gallery-card" data-category="sound" onclick="openLightbox('assets/gallery/img_3717_2.jpg', 'Music Studio & Production Workspace', 'Dr. Sokar\'s studio workspace featuring reference headphones and custom Dr. Sokar studio planter.')">
           <div class="gallery-img-wrap">
             <img src="assets/gallery/img_3717_2.jpg" alt="Dr. Sokar Music Studio Workspace" loading="lazy">
@@ -373,36 +357,22 @@
           </div>
         </div>
 
-        <!-- 8. Post-Concert Celebration (IMG_7314) -->
-        <div class="gallery-card" data-category="arts teaching" onclick="openLightbox('assets/gallery/img_7314.jpg', 'School Concert Celebration', 'Celebrating the successful conclusion of a school musical performance and ensemble concert with flowers.')">
+        <!-- 7. Post-Concert Celebration (IMG_7314) -->
+        <div class="gallery-card" data-category="concerts teaching" onclick="openLightbox('assets/gallery/img_7314.jpg', 'School Concert Celebration', 'Celebrating the successful conclusion of a school musical performance and ensemble concert with flowers.')">
           <div class="gallery-img-wrap">
             <img src="assets/gallery/img_7314.jpg" alt="Post-Concert Celebration with Flowers" loading="lazy">
           </div>
           <div class="gallery-meta">
             <div>
               <div class="gallery-caption">Concert Performance Celebration</div>
-              <p class="gallery-desc">Celebrating following a school concert and ensemble showcase with family and music students.</p>
+              <p class="gallery-desc">Celebrating following a school concert and ensemble showcase with music students and supporters.</p>
             </div>
-            <span class="gallery-tag">Concerts & Theatre</span>
+            <span class="gallery-tag">Concerts & Repertoire</span>
           </div>
         </div>
 
-        <!-- 9. Wake Forest High School Diploma Presentation (IMG_8450) -->
-        <div class="gallery-card" data-category="academic life" onclick="openLightbox('assets/gallery/img_8450.jpg', 'Wake Forest High School Graduation', 'Dr. Sokar celebrating the graduation and diploma presentation of daughter Maria Sokar at Wake Forest High School, NC.')">
-          <div class="gallery-img-wrap">
-            <img src="assets/gallery/img_8450.jpg" alt="Wake Forest High School Diploma Presentation" loading="lazy">
-          </div>
-          <div class="gallery-meta">
-            <div>
-              <div class="gallery-caption">Wake Forest High School Diploma</div>
-              <p class="gallery-desc">Honoring educational achievements and graduation milestones with daughter Maria Sokar in Wake Forest, NC.</p>
-            </div>
-            <span class="gallery-tag">Academic & Milestones</span>
-          </div>
-        </div>
-
-        <!-- 10. Broadway Musical Theater Attendance (IMG_1922) -->
-        <div class="gallery-card" data-category="arts" onclick="openLightbox('assets/gallery/img_1922.jpg', 'Broadway Musical & Performing Arts', 'Attending the Broadway touring production of Funny Girl at the performing arts center.')">
+        <!-- 8. Broadway Musical Theater Attendance (IMG_1922) -->
+        <div class="gallery-card" data-category="concerts" onclick="openLightbox('assets/gallery/img_1922.jpg', 'Broadway Musical & Performing Arts', 'Attending the Broadway touring production of Funny Girl at the performing arts center.')">
           <div class="gallery-img-wrap">
             <img src="assets/gallery/img_1922.jpg" alt="Broadway Musical Theater Attendance" loading="lazy">
           </div>
@@ -411,26 +381,26 @@
               <div class="gallery-caption">Musical Theatre & Performing Arts</div>
               <p class="gallery-desc">Engaging with professional theatrical productions, Broadway touring musicals, and stage repertoire.</p>
             </div>
-            <span class="gallery-tag">Concerts & Theatre</span>
+            <span class="gallery-tag">Performing Arts</span>
           </div>
         </div>
 
-        <!-- 11. Symphony Concert Attendance (IMG_9518) -->
-        <div class="gallery-card" data-category="arts" onclick="openLightbox('assets/gallery/img_9518.jpg', 'Symphonic Concert Attendance', 'Attending orchestral and symphonic performances in the auditorium with concert programs.')">
+        <!-- 9. Symphony Concert Attendance (IMG_9518) -->
+        <div class="gallery-card" data-category="concerts" onclick="openLightbox('assets/gallery/img_9518.jpg', 'Symphonic Concert Attendance', 'Attending orchestral and symphonic performances in the auditorium with concert programs.')">
           <div class="gallery-img-wrap">
             <img src="assets/gallery/img_9518.jpg" alt="Symphony Concert Attendance" loading="lazy">
           </div>
           <div class="gallery-meta">
             <div>
               <div class="gallery-caption">Symphonic Repertoire & Concerts</div>
-              <p class="gallery-desc">Attending symphonic performances and classical repertoire programs with family in North Carolina.</p>
+              <p class="gallery-desc">Attending symphonic performances and classical repertoire programs in North Carolina.</p>
             </div>
-            <span class="gallery-tag">Concerts & Theatre</span>
+            <span class="gallery-tag">Concerts & Repertoire</span>
           </div>
         </div>
 
-        <!-- 12. Dr. John Sokar Portrait (john_sokar) -->
-        <div class="gallery-card" data-category="academic" onclick="openLightbox('assets/gallery/john_sokar.jpg', 'Dr. John Sokar, Ph.D.', 'Doctor of Philosophy in Music Education (Hannover), Master Flutist, and North Carolina Licensed Educator.')">
+        <!-- 10. Dr. John Sokar Portrait (john_sokar) -->
+        <div class="gallery-card" data-category="concerts teaching" onclick="openLightbox('assets/gallery/john_sokar.jpg', 'Dr. John Sokar, Ph.D.', 'Doctor of Philosophy in Music Education (Hannover), Master Flutist, and North Carolina Licensed Educator.')">
           <div class="gallery-img-wrap">
             <img src="assets/gallery/john_sokar.jpg" alt="Dr. John Sokar Portrait" loading="lazy">
           </div>
@@ -439,105 +409,7 @@
               <div class="gallery-caption">Dr. John Sokar, Ph.D.</div>
               <p class="gallery-desc">Flutist, scholar, and music educator bridging international conservatory rigor and modern instructional practice.</p>
             </div>
-            <span class="gallery-tag">Academic & Milestones</span>
-          </div>
-        </div>
-
-        <!-- 13. Family Portrait (IMG_3648) -->
-        <div class="gallery-card" data-category="life" onclick="openLightbox('assets/gallery/img_3648.jpg', 'Family Portrait', 'Portrait honoring family and support in Dr. Sokar\'s educational and artistic journey.')">
-          <div class="gallery-img-wrap">
-            <img src="assets/gallery/img_3648.jpg" alt="Family Portrait" loading="lazy">
-          </div>
-          <div class="gallery-meta">
-            <div>
-              <div class="gallery-caption">Family Portrait</div>
-              <p class="gallery-desc">Celebrating family dedication and enduring support throughout Dr. Sokar\'s musical career.</p>
-            </div>
-            <span class="gallery-tag">Family & Community</span>
-          </div>
-        </div>
-
-        <!-- 14. Community Life in North Carolina (IMG_6766) -->
-        <div class="gallery-card" data-category="life" onclick="openLightbox('assets/gallery/img_6766.jpg', 'Community Life in North Carolina', 'Candid moment celebrating milestones and community life in the Triangle area.')">
-          <div class="gallery-img-wrap">
-            <img src="assets/gallery/img_6766.jpg" alt="Community Life in North Carolina" loading="lazy">
-          </div>
-          <div class="gallery-meta">
-            <div>
-              <div class="gallery-caption">Community & Family Life</div>
-              <p class="gallery-desc">Shared moments of warmth and community connection in the Triangle area of North Carolina.</p>
-            </div>
-            <span class="gallery-tag">Family & Community</span>
-          </div>
-        </div>
-
-        <!-- 15. Triangle Area Life (IMG_3753) -->
-        <div class="gallery-card" data-category="life" onclick="openLightbox('assets/gallery/img_3753.jpg', 'Life in the Triangle Area', 'Dr. John Sokar and his wife on a sunny afternoon in Wake County.')">
-          <div class="gallery-img-wrap">
-            <img src="assets/gallery/img_3753.jpg" alt="Dr. John Sokar and Wife" loading="lazy">
-          </div>
-          <div class="gallery-meta">
-            <div>
-              <div class="gallery-caption">Life in the Triangle Area</div>
-              <p class="gallery-desc">Enjoying sunny afternoons and local community connection across Wake and Durham counties.</p>
-            </div>
-            <span class="gallery-tag">Family & Community</span>
-          </div>
-        </div>
-
-        <!-- 16. Casual Gathering (IMG_0650) -->
-        <div class="gallery-card" data-category="life" onclick="openLightbox('assets/gallery/img_0650.jpg', 'Community Gathering', 'Relaxing afternoon and conversation in the local North Carolina community.')">
-          <div class="gallery-img-wrap">
-            <img src="assets/gallery/img_0650.jpg" alt="Community Gathering" loading="lazy">
-          </div>
-          <div class="gallery-meta">
-            <div>
-              <div class="gallery-caption">Community Connection</div>
-              <p class="gallery-desc">Connecting with neighbors, friends, and fellow arts enthusiasts across North Carolina.</p>
-            </div>
-            <span class="gallery-tag">Family & Community</span>
-          </div>
-        </div>
-
-        <!-- 17. Family Gathering (IMG_4562) -->
-        <div class="gallery-card" data-category="life" onclick="openLightbox('assets/gallery/img_4562.jpg', 'Family Celebrations at Home', 'Celebrating family milestones and festive gatherings at home.')">
-          <div class="gallery-img-wrap">
-            <img src="assets/gallery/img_4562.jpg" alt="Family Celebrations at Home" loading="lazy">
-          </div>
-          <div class="gallery-meta">
-            <div>
-              <div class="gallery-caption">Family Celebrations & Gatherings</div>
-              <p class="gallery-desc">Celebrating academic achievements, personal growth, and holiday gatherings.</p>
-            </div>
-            <span class="gallery-tag">Family & Community</span>
-          </div>
-        </div>
-
-        <!-- 18. Outdoor Life (IMG_0138) -->
-        <div class="gallery-card" data-category="life" onclick="openLightbox('assets/gallery/img_0138.jpg', 'North Carolina Greenways & Parks', 'Enjoying the outdoors and natural landscapes across Wake and Durham counties.')">
-          <div class="gallery-img-wrap">
-            <img src="assets/gallery/img_0138.jpg" alt="North Carolina Greenways and Parks" loading="lazy">
-          </div>
-          <div class="gallery-meta">
-            <div>
-              <div class="gallery-caption">North Carolina Outdoors</div>
-              <p class="gallery-desc">Enjoying the vibrant parks, greenways, and athletic fields in the local community.</p>
-            </div>
-            <span class="gallery-tag">Family & Community</span>
-          </div>
-        </div>
-
-        <!-- 19. Academic Headshot (IMG_9004) -->
-        <div class="gallery-card" data-category="academic" onclick="openLightbox('assets/gallery/img_9004.jpg', 'Academic & Educator Profile', 'Official educator portrait for Wake County Public School System and professional dossiers.')">
-          <div class="gallery-img-wrap">
-            <img src="assets/gallery/img_9004.jpg" alt="Academic and Educator Profile" loading="lazy">
-          </div>
-          <div class="gallery-meta">
-            <div>
-              <div class="gallery-caption">Educator & Scholar Profile</div>
-              <p class="gallery-desc">Professional educator profile supporting school district leadership and collegiate search committees.</p>
-            </div>
-            <span class="gallery-tag">Academic & Milestones</span>
+            <span class="gallery-tag">Professional Portrait</span>
           </div>
         </div>
       </div>
@@ -592,7 +464,7 @@
     });
 
     // Gallery Filter
-    const filterBtns = document.querySelectorAll(".gallery-filter-bar");
+    const filterBtns = document.querySelectorAll(".gallery-filter-btn");
     const galleryCards = document.querySelectorAll(".gallery-card");
 
     filterBtns.forEach(btn => {
