@@ -10,6 +10,67 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/shared.css">
+
+  <style>
+    .dossier-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .dossier-card-wide {
+      grid-column: 1 / -1;
+    }
+
+    .clean-card {
+      padding: 36px 40px;
+    }
+
+    .timeline-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 20px;
+      border-left: 2px solid var(--border-focus);
+    }
+
+    .timeline-role {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .timeline-org {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      margin-bottom: 6px;
+    }
+
+    .timeline-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    @media (max-width: 960px) {
+      .dossier-grid {
+        grid-template-columns: 1fr;
+      }
+      .clean-card {
+        padding: 28px 24px;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- FIXED NAVIGATION -->
@@ -59,90 +120,132 @@
   <!-- MAIN CONTENT -->
   <main class="page-content-section">
     <div class="container">
-      <div class="card-grid">
-        <!-- Card 1: Academic & Professional Appointments -->
-        <article class="clean-card" style="grid-column: 1 / -1;">
-          <div class="section-eyebrow" style="margin-bottom:6px;">Career Arc</div>
-          <h2 style="font-size:1.8rem; margin-bottom:16px;">Professional Appointments</h2>
-          <ul>
-            <li>
-              <strong>Music Teacher & Ensemble Director</strong> — Wake County Public School System, NC (2023–Present).
-              <br><span style="color:var(--text-muted); font-size:0.9rem;">Jones Dairy Elementary School & Reedy Creek Elementary. Leading general music, Orff ensembles, and campus concert productions.</span>
-            </li>
-            <li>
-              <strong>Music Educator</strong> — Durham Public Schools, NC (2015–2023).
-              <br><span style="color:var(--text-muted); font-size:0.9rem;">Mangum Elementary School. Directed musical theater, choral programs, and technology-integrated elementary music.</span>
-            </li>
-            <li>
-              <strong>Assistant Professor & University Lecturer</strong> — Faculty of Music Education, Helwan University, Cairo (1995–2014).
-              <br><span style="color:var(--text-muted); font-size:0.9rem;">Performance Department. Taught undergraduate and graduate flute performance, woodwind chamber ensembles, and supervised scholarly research and master's theses.</span>
-            </li>
-            <li>
-              <strong>Music & Arts Coordinator</strong> — Deutsche Schule Cairo (2006–2014).
-              <br><span style="color:var(--text-muted); font-size:0.9rem;">ZfA Partner School. Directed orchestra, choirs, campus acoustic engineering, and sound system design.</span>
-            </li>
-            <li>
-              <strong>Flutist</strong> — Cairo Opera House Orchestra (1995–2001).
-              <br><span style="color:var(--text-muted); font-size:0.9rem;">Performed extensive orchestral repertoire, operatic productions, and chamber concerts.</span>
-            </li>
-          </ul>
+      <div class="dossier-grid">
+        <!-- Card 1: Academic & Professional Appointments (Full Width) -->
+        <article class="clean-card dossier-card-wide">
+          <div class="section-eyebrow" style="margin-bottom:8px;">Career Arc</div>
+          <h2 style="font-size:2rem; margin-bottom:24px;">Professional Appointments & Leadership</h2>
+          
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <div class="timeline-role">Music Teacher & Ensemble Director</div>
+              <div class="timeline-org">Wake County Public School System, NC • 2023–Present</div>
+              <p class="timeline-desc">
+                Leading general music, active Orff ensembles, digital music technology integration, and campus concert productions at Jones Dairy Elementary School & Reedy Creek Elementary.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-role">Music Educator & Department Lead</div>
+              <div class="timeline-org">Durham Public Schools, NC • 2015–2023</div>
+              <p class="timeline-desc">
+                Serving as Music Teacher at Mangum Elementary School (Bahama, NC). Directed student musical theatre productions, choral programs, general music curriculum, and live performance audio systems.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-role">Assistant Professor & University Lecturer</div>
+              <div class="timeline-org">Faculty of Music Education, Helwan University, Cairo • 1995–2014</div>
+              <p class="timeline-desc">
+                Performance Department. Instructed undergraduate and graduate flute performance, woodwind chamber ensembles, flute literature, and supervised academic research and master's degree examinations.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-role">Music & Arts Coordinator</div>
+              <div class="timeline-org">Deutsche Schule Cairo (ZfA Partner School) • 2006–2014</div>
+              <p class="timeline-desc">
+                Directed German-curriculum school orchestra, youth choirs, afternoon music academy, campus acoustic room design, and school CD album productions ("Auf Takt I & II").
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-role">Flutist — Opera Orchestra</div>
+              <div class="timeline-org">Cairo Opera House Orchestra • 1995–2001</div>
+              <p class="timeline-desc">
+                Performed extensive symphonic masterworks, operatic productions, ballets, and international woodwind chamber concerts.
+              </p>
+            </div>
+          </div>
         </article>
 
-        <!-- Card 2: NC Educator License -->
+        <!-- Card 2: NC Educator License (Column 1) -->
         <article class="clean-card">
-          <div class="section-eyebrow" style="margin-bottom:6px;">Public Licensure</div>
-          <h3>North Carolina Educator License</h3>
-          <p>Standard Professional Continuing License in Music K-12 issued by the North Carolina State Board of Education & Department of Public Instruction.</p>
-          <ul>
+          <div class="section-eyebrow" style="margin-bottom:8px;">Public Licensure</div>
+          <h3 style="font-size:1.5rem; margin-bottom:14px;">North Carolina Educator License</h3>
+          <p style="color:var(--text-secondary); line-height:1.6; margin-bottom:18px;">
+            Standard Professional Continuing License in Music K-12 issued by the North Carolina State Board of Education & Department of Public Instruction.
+          </p>
+          <ul style="display:flex; flex-direction:column; gap:10px;">
             <li><strong>Licensure Area:</strong> Music K-12 (Comprehensive Instrumental, Choral, and General Music).</li>
             <li><strong>Status:</strong> Continuing Professional Educator License.</li>
-            <li><strong>Current Validity Cycle:</strong> Effective through June 30, 2031.</li>
+            <li><strong>Current Validity:</strong> Valid and active through June 30, 2031.</li>
+            <li><strong>Instructional Scope:</strong> Early childhood through grade 12 music pedagogy and performance ensembles.</li>
           </ul>
         </article>
 
-        <!-- Card 3: Degrees & Academic Qualifications -->
+        <!-- Card 3: Degrees & Academic Qualifications (Column 2) -->
         <article class="clean-card">
-          <div class="section-eyebrow" style="margin-bottom:6px;">Higher Education</div>
-          <h3>Degrees & Dissertation</h3>
-          <ul>
+          <div class="section-eyebrow" style="margin-bottom:8px;">Higher Education</div>
+          <h3 style="font-size:1.5rem; margin-bottom:14px;">Degrees & Dissertation</h3>
+          <ul style="display:flex; flex-direction:column; gap:16px;">
             <li>
               <strong>Doctor of Philosophy (Ph.D.) in Music Education & Flute Pedagogy</strong>
-              <br>Hochschule für Musik, Theater und Medien Hannover, Germany.
-              <br><em style="color:var(--accent-gold); font-size:0.9rem;">Dissertation: "The Modern German School of Flute Pedagogy: A Cross-Cultural Investigation."</em>
+              <div style="color:var(--text-muted); font-size:0.9rem; margin-top:2px;">Hochschule für Musik, Theater und Medien Hannover, Germany (2005).</div>
+              <div style="color:var(--accent-gold); font-size:0.9rem; margin-top:4px; font-style:italic;">
+                Dissertation: "The Modern German School of Flute Pedagogy: A Cross-Cultural Investigation."
+              </div>
             </li>
             <li>
               <strong>Master of Music Education (M.Mus.Ed.) in Flute Performance</strong>
-              <br>Helwan University, Cairo. Certified U.S. Master's equivalence.
+              <div style="color:var(--text-muted); font-size:0.9rem; margin-top:2px;">Helwan University, Cairo (2001) • Certified U.S. Master's Equivalence.</div>
             </li>
             <li>
               <strong>Bachelor of Music Education (B.Mus.Ed.)</strong>
-              <br>Helwan University, Cairo. Certified U.S. Bachelor's equivalence.
+              <div style="color:var(--text-muted); font-size:0.9rem; margin-top:2px;">Helwan University, Cairo (1995) • Certified U.S. Bachelor's Equivalence.</div>
             </li>
           </ul>
         </article>
 
-        <!-- Card 4: Audio & Music Technology -->
+        <!-- Card 4: Audio & Music Technology Stack (Column 1) -->
         <article class="clean-card">
-          <div class="section-eyebrow" style="margin-bottom:6px;">Production Stack</div>
-          <h3>Music Technology & Sound</h3>
-          <p>Comprehensive production fluency in professional Digital Audio Workstations, notation engraving, and live audio engineering.</p>
-          <ul>
-            <li><strong>DAWs & Sequencing:</strong> Apple Logic Pro X, Ableton Live, Cakewalk Sonar, Sound Forge.</li>
-            <li><strong>Notation & Scoring:</strong> Sibelius, MuseScore, MusicXML, ABC notation.</li>
-            <li><strong>Live Sound Systems:</strong> Digital/analog audio consoles, stage multi-miking, PA calibration, and multi-track recording.</li>
+          <div class="section-eyebrow" style="margin-bottom:8px;">Production Fluency</div>
+          <h3 style="font-size:1.5rem; margin-bottom:14px;">Music Technology & Sound</h3>
+          <p style="color:var(--text-secondary); line-height:1.6; margin-bottom:18px;">
+            Comprehensive production fluency in professional Digital Audio Workstations, notation engraving, and live sound reinforcement.
+          </p>
+          <ul style="display:flex; flex-direction:column; gap:10px;">
+            <li><strong>Digital Audio Workstations (DAWs):</strong> Apple Logic Pro X, Ableton Live, Cakewalk Sonar, WaveLab, Sound Forge.</li>
+            <li><strong>Notation & Scoring:</strong> Sibelius, Finale, MuseScore, MusicXML, ABC notation.</li>
+            <li><strong>Sound Reinforcement:</strong> Multi-channel digital/analog consoles, AKG reference monitoring, stage multi-miking, and acoustic room tuning.</li>
           </ul>
         </article>
 
-        <!-- Card 5: Professional Development -->
+        <!-- Card 5: Professional Development & Certifications (Column 2) -->
         <article class="clean-card">
-          <div class="section-eyebrow" style="margin-bottom:6px;">Continuous Growth</div>
-          <h3>Specialized Training & Masterclasses</h3>
-          <ul>
-            <li><strong>Music for Wellness: An Integrative Approach</strong> — Berklee College of Music.</li>
-            <li><strong>Instructional Technology in Music Education</strong> — Digital tools for creative classroom engagement.</li>
-            <li><strong>Developing Creativity in Music Pedagogy</strong> — Research-backed creative improvisation.</li>
-            <li><strong>Intercultural Collaboration with Families</strong> — ZfA Deutsche Auslandsschularbeit training.</li>
-            <li><strong>Higher Education Quality Assurance & Accreditation</strong> — Institutional evaluation workshop.</li>
+          <div class="section-eyebrow" style="margin-bottom:8px;">Continuous Growth</div>
+          <h3 style="font-size:1.5rem; margin-bottom:14px;">Specialized Certifications & Training</h3>
+          <ul style="display:flex; flex-direction:column; gap:12px;">
+            <li>
+              <strong>Music for Wellness: An Integrative Approach</strong>
+              <div style="color:var(--text-muted); font-size:0.9rem;">Berklee College of Music.</div>
+            </li>
+            <li>
+              <strong>Composing for Electronic Instruments I & II</strong>
+              <div style="color:var(--text-muted); font-size:0.9rem;">Hochschule für Musik, Theater und Medien Hannover, Germany.</div>
+            </li>
+            <li>
+              <strong>Designing with Audio-Visual Media</strong>
+              <div style="color:var(--text-muted); font-size:0.9rem;">Hochschule für Musik Hannover.</div>
+            </li>
+            <li>
+              <strong>Intercultural Collaboration in Education</strong>
+              <div style="color:var(--text-muted); font-size:0.9rem;">ZfA Deutsche Auslandsschularbeit International.</div>
+            </li>
+            <li>
+              <strong>Higher Education Quality Assurance & Accreditation</strong>
+              <div style="color:var(--text-muted); font-size:0.9rem;">Quality Assurance Center, Helwan University.</div>
+            </li>
           </ul>
         </article>
       </div>
