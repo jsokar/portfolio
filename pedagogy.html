@@ -37,9 +37,27 @@
             <line x1="12" y1="21" x2="12" y2="23"></line>
           </svg>
         </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-label="Toggle Navigation Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
         <a class="btn-nav-cta" href="contact.html">Inquire</a>
       </div>
     </nav>
+
+    <!-- MOBILE NAVIGATION DRAWER -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <a class="mobile-nav-link" href="index.html">Home</a>
+      <a class="mobile-nav-link" href="dossier.html">Dossier</a>
+      <a class="mobile-nav-link active" href="pedagogy.html">Pedagogy</a>
+      <a class="mobile-nav-link" href="sound-engineering.html">Sound Engineering</a>
+      <a class="mobile-nav-link" href="gallery.html">Gallery</a>
+      <a class="mobile-nav-link" href="contact.html">Contact</a>
+      <a class="mobile-nav-cta" href="contact.html">Inquire / Contact</a>
+    </div>
   </header>
 
   <!-- PAGE HEADER -->
@@ -160,6 +178,20 @@
       const currentTheme = htmlEl.getAttribute("data-theme");
       setTheme(currentTheme === "dark" ? "light" : "dark");
     });
+
+    const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+    const mobileNavDrawer = document.getElementById("mobileNavDrawer");
+    if (mobileMenuToggle && mobileNavDrawer) {
+      mobileMenuToggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        mobileNavDrawer.classList.toggle("open");
+      });
+      document.addEventListener("click", (e) => {
+        if (!mobileNavDrawer.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+          mobileNavDrawer.classList.remove("open");
+        }
+      });
+    }
   </script>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Sound Engineering, Electronic Instrument Composition & Music Technology background of Dr. John Sokar, Ph.D.">
-  <title>Sound Engineering & Music Tech | Dr. John Sokar, Ph.D.</title>
+  <meta name="description" content="Sound Engineering, Electronic Music Composition, and Audio Production Credentials of Dr. John Sokar, Ph.D.">
+  <title>Sound Engineering & Music Technology | Dr. John Sokar, Ph.D.</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,18 +12,34 @@
   <link rel="stylesheet" href="css/shared.css">
 
   <style>
+    .sound-showcase-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      margin-bottom: 48px;
+      align-items: center;
+    }
+
     .course-badge {
       display: inline-block;
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
       color: var(--accent-gold);
       background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
       padding: 4px 10px;
       border-radius: var(--radius-sm);
       margin-bottom: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 860px) {
+      .sound-showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 32px;
+      }
     }
   </style>
 </head>
@@ -53,9 +69,27 @@
             <line x1="12" y1="21" x2="12" y2="23"></line>
           </svg>
         </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-label="Toggle Navigation Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
         <a class="btn-nav-cta" href="contact.html">Inquire</a>
       </div>
     </nav>
+
+    <!-- MOBILE NAVIGATION DRAWER -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <a class="mobile-nav-link" href="index.html">Home</a>
+      <a class="mobile-nav-link" href="dossier.html">Dossier</a>
+      <a class="mobile-nav-link" href="pedagogy.html">Pedagogy</a>
+      <a class="mobile-nav-link active" href="sound-engineering.html">Sound Engineering</a>
+      <a class="mobile-nav-link" href="gallery.html">Gallery</a>
+      <a class="mobile-nav-link" href="contact.html">Contact</a>
+      <a class="mobile-nav-cta" href="contact.html">Inquire / Contact</a>
+    </div>
   </header>
 
   <!-- PAGE HEADER -->
@@ -76,7 +110,7 @@
   <main class="page-content-section">
     <div class="container">
       <!-- Live Production Showcase -->
-      <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 24px; margin-bottom: 48px; align-items: center;">
+      <div class="sound-showcase-grid">
         <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--card-shadow); max-height: 420px;">
           <img src="assets/gallery/img_4798_2.jpg" alt="Dr. John Sokar Live Sound Engineering" style="width:100%; height:100%; object-fit:cover; display:block;">
         </div>
@@ -118,12 +152,12 @@
           <span class="course-badge">Univ. of Music Hannover • 2001–2004 & 2005</span>
           <h3>Composing for Electronic Instruments I & II</h3>
           <p>
-            Advanced studies at the Hochschule für Musik, Theater und Medien Hannover, Germany.
+            Advanced graduate studies in electronic composition, synthesis architectures, and sound design at the Hochschule für Musik, Theater und Medien Hannover, Germany.
           </p>
           <ul>
-            <li>Electronic sound synthesis, frequency modulation, and timbre design.</li>
-            <li>Compositional structures for electronic and electro-acoustic media.</li>
-            <li>Integration of synthesized textures with classical orchestral instruments.</li>
+            <li>Synthesizer programming, algorithmic sound generation, and MIDI sequencing.</li>
+            <li>Electroacoustic music structures and modern timbre composition.</li>
+            <li>Digital signal editing and spatial acoustic sound projection.</li>
           </ul>
         </article>
 
@@ -132,71 +166,53 @@
           <span class="course-badge">Univ. of Music Hannover • 2001–2002</span>
           <h3>Designing with Audio-Visual Media</h3>
           <p>
-            Specialized curriculum at the Hochschule für Musik, Theater und Medien Hannover.
+            Interdisciplinary coursework at the University of Music and Drama Hannover focusing on synchronizing music, electronic soundscapes, and digital visual media.
           </p>
           <ul>
-            <li>Synchronization of audio soundtracks with visual media and educational content.</li>
-            <li>Digital audio editing, spatial sound design, and multimedia authoring.</li>
+            <li>Digital audio editing, synchronization, and sound-to-picture alignment.</li>
+            <li>Multi-channel studio audio production for stage and media arts.</li>
+            <li>Interactive multimedia installations and digital scoring workflows.</li>
           </ul>
         </article>
 
         <!-- Course 4 -->
         <article class="clean-card">
-          <span class="course-badge">Cairo • 2006–2008</span>
-          <h3>Studio Production: "Auf Takt I & II"</h3>
+          <span class="course-badge">Acoustic Room Design • 2010–2014</span>
+          <h3>Acoustic Design & Sound Treatments</h3>
           <p>
-            Music rearrangement, original composition, choir training, multi-track recording, and sound engineering for school and community musical releases.
+            Practical engineering leadership at Deutsche Schule Cairo, optimizing performance auditoriums, rehearsal halls, and recording rooms.
           </p>
-        </article>
-
-        <!-- Course 5 -->
-        <article class="clean-card">
-          <span class="course-badge">Berklee College of Music</span>
-          <h3>Music for Wellness: An Integrative Approach</h3>
-          <p>
-            Specialized certification exploring psychoacoustics, acoustic resonance, and the therapeutic applications of sound in educational and clinical contexts.
-          </p>
-        </article>
-
-        <!-- Course 6 -->
-        <article class="clean-card">
-          <span class="course-badge">Campus Infrastructure</span>
-          <h3>Acoustic Design & Sound Treatment</h3>
-          <p>
-            Designed custom architectural acoustic treatments to enhance frequency response and sound isolation for performance auditoriums, band rehearsal spaces, and music classrooms.
-          </p>
+          <ul>
+            <li>Sound propagation analysis, flutter echo elimination, and acoustic panel placement.</li>
+            <li>School auditorium PA system tuning and multi-zone distribution.</li>
+            <li>Audio engineering for live choir and full symphonic student orchestra recordings.</li>
+          </ul>
         </article>
       </div>
 
-      <!-- Section 2: Complete Software & Hardware Stack -->
-      <div class="section-eyebrow" style="margin-bottom:12px;">Technical Fluency</div>
-      <h2 style="font-size:1.8rem; margin-bottom:24px;">Production Software & Systems Stack</h2>
+      <!-- Section 2: Production Tooling & DAW Stack -->
+      <div class="section-eyebrow" style="margin-bottom:12px;">Production Stack</div>
+      <h2 style="font-size:1.8rem; margin-bottom:24px;">Digital Audio Workstations & Software</h2>
 
       <div class="card-grid">
         <article class="clean-card">
-          <h3>Digital Audio Workstations (DAWs)</h3>
+          <span class="course-badge">DAWs & Production</span>
+          <h3>Digital Audio Workstations</h3>
+          <p>End-to-end multi-track recording, editing, mixing, and mastering across leading industry platforms.</p>
           <ul>
-            <li><strong>Apple Logic Pro X:</strong> Primary multi-track recording, MIDI sequencing, and orchestral mockups.</li>
-            <li><strong>Ableton Live:</strong> Live performance triggering, looping, and electronic synthesis.</li>
-            <li><strong>Cakewalk Sonar:</strong> Linear sequencing, mixing, and audio processing.</li>
-            <li><strong>Steinberg WaveLab & Sound Forge:</strong> Precision 2-track audio editing, spectral restoration, and mastering.</li>
+            <li><strong>Apple Logic Pro X:</strong> Primary studio DAW for multi-track composition, tracking, and spatial mixing.</li>
+            <li><strong>Ableton Live:</strong> Live performance sequencing, sample manipulation, and electronic instrument control.</li>
+            <li><strong>Cakewalk Sonar & WaveLab:</strong> High-resolution audio mastering and digital stem processing.</li>
           </ul>
         </article>
 
         <article class="clean-card">
-          <h3>Notation, Scoring & Media</h3>
+          <span class="course-badge">Scoring & Engraving</span>
+          <h3>Notation & Music Technology</h3>
+          <p>Digital score preparation, algorithmic composition, and classroom music technology integration.</p>
           <ul>
-            <li><strong>Sibelius & Finale:</strong> Professional score engraving, orchestral parts layout, and publishing.</li>
-            <li><strong>MuseScore & MusicXML:</strong> Classroom notation literacy and cross-platform score exchange.</li>
-            <li><strong>Graphic & Video Media:</strong> Final Cut Pro, Adobe Photoshop, InDesign, and Illustrator for concert program and album cover design.</li>
-          </ul>
-        </article>
-
-        <article class="clean-card">
-          <h3>Live Sound Reinforcement & Hardware</h3>
-          <ul>
-            <li><strong>Mixing Consoles:</strong> Digital and analog multi-channel soundboards for concerts and stage productions.</li>
-            <li><strong>PA & Microphones:</strong> Stage multi-miking (condenser, dynamic, ribbon) and acoustic room calibration.</li>
+            <li><strong>Sibelius & Finale:</strong> Orchestral and chamber score publication-quality engraving.</li>
+            <li><strong>MuseScore & MusicXML:</strong> Open-source digital score exchange and classroom curriculum creation.</li>
             <li><strong>Audio Systems:</strong> School-wide sound reinforcement, event audio engineering, and live recording setups.</li>
           </ul>
         </article>
@@ -238,6 +254,20 @@
       const currentTheme = htmlEl.getAttribute("data-theme");
       setTheme(currentTheme === "dark" ? "light" : "dark");
     });
+
+    const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+    const mobileNavDrawer = document.getElementById("mobileNavDrawer");
+    if (mobileMenuToggle && mobileNavDrawer) {
+      mobileMenuToggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        mobileNavDrawer.classList.toggle("open");
+      });
+      document.addEventListener("click", (e) => {
+        if (!mobileNavDrawer.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+          mobileNavDrawer.classList.remove("open");
+        }
+      });
+    }
   </script>
 </body>
 </html>
