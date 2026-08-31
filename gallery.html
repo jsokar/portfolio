@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Photo Gallery of Dr. John Sokar, Ph.D. - Flute masterclasses, school productions, orchestral rehearsals, and studio sessions.">
+  <title>Photo Gallery | Dr. John Sokar, Ph.D.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shared.css">
+
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .gallery-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: var(--card-shadow);
+      transition: transform var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-focus);
+    }
+
+    .gallery-img-wrap {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: var(--bg-surface);
+    }
+
+    .gallery-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .gallery-card:hover .gallery-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    .gallery-meta {
+      padding: 16px 20px;
+    }
+
+    .gallery-caption {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .gallery-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Lightbox Modal */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(9, 10, 13, 0.92);
+      backdrop-filter: blur(14px);
+      z-index: 300;
+      display: none;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .lightbox-modal.active {
+      display: grid;
+    }
+
+    .lightbox-content {
+      max-width: 900px;
+      max-height: 85vh;
+      position: relative;
+    }
+
+    .lightbox-content img {
+      max-height: 75vh;
+      border-radius: var(--radius-md);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+      margin: 0 auto;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -44px;
+      right: 0;
+      color: #ffffff;
+      font-size: 1.8rem;
+    }
+
+    @media (max-width: 900px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- FIXED NAVIGATION -->
+  <header class="site-nav-wrapper">
+    <nav class="site-nav" aria-label="Main Navigation">
+      <a class="brand-link" href="index.html">
+        <div class="brand-avatar">JS</div>
+        <span class="brand-name">Dr. John Sokar</span>
+      </a>
+
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="dossier.html">Dossier</a>
+        <a class="nav-link" href="pedagogy.html">Pedagogy</a>
+        <a class="nav-link" href="acoustics.html">Acoustics Lab</a>
+        <a class="nav-link active" href="gallery.html">Gallery</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle Theme">
+          <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+          </svg>
+        </button>
+        <a class="btn-nav-cta" href="contact.html">Inquire</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header-section">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <span>/</span> <span>Photo Gallery</span>
+      </div>
+      <div class="section-eyebrow">Studio, Rehearsals & Concerts</div>
+      <h1 class="page-title">Visual Record of Music-Making</h1>
+      <p class="page-subtitle">
+        Moments from classroom coaching, ensemble direction, campus arts productions, and applied flute masterclasses.
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="page-content-section">
+    <div class="container">
+      <div class="gallery-grid">
+        <div class="gallery-card" onclick="openLightbox('assets/gallery/john-sokar.jpg')">
+          <div class="gallery-img-wrap">
+            <img src="assets/gallery/john-sokar.jpg" alt="Dr. John Sokar Portrait" loading="lazy">
+          </div>
+          <div class="gallery-meta">
+            <div class="gallery-caption">Dr. John Sokar • Flute Studio</div>
+            <div class="gallery-tag">Applied Studio</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox('assets/gallery/img_1772.jpg')">
+          <div class="gallery-img-wrap">
+            <img src="assets/gallery/img_1772.jpg" alt="Ensemble Rehearsal" loading="lazy">
+          </div>
+          <div class="gallery-meta">
+            <div class="gallery-caption">Ensemble & Stage Leadership</div>
+            <div class="gallery-tag">Rehearsal</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox('assets/gallery/img_0650.jpg')">
+          <div class="gallery-img-wrap">
+            <img src="assets/gallery/img_0650.jpg" alt="School Concert" loading="lazy">
+          </div>
+          <div class="gallery-meta">
+            <div class="gallery-caption">School Concert Productions</div>
+            <div class="gallery-tag">Concert</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox('assets/gallery/img_6766.jpg')">
+          <div class="gallery-img-wrap">
+            <img src="assets/gallery/img_6766.jpg" alt="Audio & Stage Coordination" loading="lazy">
+          </div>
+          <div class="gallery-meta">
+            <div class="gallery-caption">Audio Engineering & Tech Setup</div>
+            <div class="gallery-tag">Production</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox('assets/gallery/img_7314.jpg')">
+          <div class="gallery-img-wrap">
+            <img src="assets/gallery/img_7314.jpg" alt="Performance Preparation" loading="lazy">
+          </div>
+          <div class="gallery-meta">
+            <div class="gallery-caption">Performance Coaching & Prep</div>
+            <div class="gallery-tag">Masterclass</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox('assets/gallery/img_0251.jpg')">
+          <div class="gallery-img-wrap">
+            <img src="assets/gallery/img_0251.jpg" alt="Music Education Event" loading="lazy">
+          </div>
+          <div class="gallery-meta">
+            <div class="gallery-caption">Classroom Musical Discovery</div>
+            <div class="gallery-tag">Orff & General Music</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close Lightbox">✕</button>
+      <img id="lightboxImg" src="" alt="Enlarged gallery view">
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <b>John Sokar, Ph.D.</b> • Music Educator, Flutist & Scholar
+      </div>
+      <div>
+        <a href="index.html" style="color:var(--accent-gold);">← Return to Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const htmlEl = document.documentElement;
+    const themeToggleBtn = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+
+    function setTheme(theme) {
+      htmlEl.setAttribute("data-theme", theme);
+      localStorage.setItem("js_theme", theme);
+      if (theme === "light") {
+        themeIcon.innerHTML = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>`;
+      } else {
+        themeIcon.innerHTML = `<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line>`;
+      }
+    }
+
+    const savedTheme = localStorage.getItem("js_theme") || "dark";
+    setTheme(savedTheme);
+
+    themeToggleBtn.addEventListener("click", () => {
+      const currentTheme = htmlEl.getAttribute("data-theme");
+      setTheme(currentTheme === "dark" ? "light" : "dark");
+    });
+
+    const lightboxModal = document.getElementById("lightboxModal");
+    const lightboxImg = document.getElementById("lightboxImg");
+
+    function openLightbox(src) {
+      lightboxImg.src = src;
+      lightboxModal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+      lightboxModal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeLightbox();
+    });
+  </script>
+</body>
+</html>

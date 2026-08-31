@@ -1,0 +1,33 @@
+X:1
+T:Diana
+T:Play the Bugle
+C:Mexican Folk Song
+M:2/2
+L:1/4
+Q:1/4=96
+K:F
+%%score { 1 }
+"F"A c A c | A c A c | "C7"G A B G | "F"A2 F2 |
+"F"A c A c | A c A c | "C7"G A B G | "F"F2 z2 :|
+|: "C"C D E F | E D "G"G G | "G7"C D E F | "C"E D C2 |
+"C"C D E F | E D "G"G G | "C"C D E F | "C"E D C2 :|
+"F"A c A c | A c A c | "C7"G A B G | "F"A2 F2 |
+"F"A c A c | A c A c | "C7"G A B G | "F"F2 z2 |]
+w: Dia- na, dia- na pa- ra ti- a Jua- na.
+w: ðya na ðya na pa ra ti a xwa na
+w: Play the bu- gle play for ti- a Juan- a.
+w: Dia- na, dia- na pa- ra tío Joa- quín.
+w: ðya na ðya na pa ra tyo xoa kin
+w: Play the bu- gle play for tío Joa- quín.
+w: Un- re- bo- zo lle- va e- lla,
+w: un re βo so ye βa e ya
+w: On her head she wears a shawl, and
+w: un som- bre- ro lle- va él.
+w: un som bre ro ye βa el
+w: On his head he wears a hat.
+w: Dia- na, dia- na pa- ra ti- a Jua- na.
+w: ðya na ðya na pa ra ti a xwa na
+w: Play the bu- gle play for ti- a Juan- a.
+w: dia- na, dia- na pa- ra tío Joa- quín. ¡Hey!
+w: ðya na ðya na pa ra tyo xoa kin
+w: Play the bu- gle play for tío Joa- quín. Hey!
