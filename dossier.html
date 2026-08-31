@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -108,18 +108,18 @@
         <a class="btn-nav-cta" href="contact.html">Inquire</a>
       </div>
     </nav>
-
-    <!-- MOBILE NAVIGATION DRAWER -->
-    <div class="mobile-nav-drawer" id="mobileNavDrawer">
-      <a class="mobile-nav-link" href="index.html">Home</a>
-      <a class="mobile-nav-link active" href="dossier.html">Dossier</a>
-      <a class="mobile-nav-link" href="pedagogy.html">Pedagogy</a>
-      <a class="mobile-nav-link" href="sound-engineering.html">Sound Engineering</a>
-      <a class="mobile-nav-link" href="gallery.html">Gallery</a>
-      <a class="mobile-nav-link" href="contact.html">Contact</a>
-      <a class="mobile-nav-cta" href="contact.html">Inquire / Contact</a>
-    </div>
   </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <a class="mobile-nav-link" href="index.html">Home</a>
+    <a class="mobile-nav-link active" href="dossier.html">Dossier</a>
+    <a class="mobile-nav-link" href="pedagogy.html">Pedagogy</a>
+    <a class="mobile-nav-link" href="sound-engineering.html">Sound Engineering</a>
+    <a class="mobile-nav-link" href="gallery.html">Gallery</a>
+    <a class="mobile-nav-link" href="contact.html">Contact</a>
+    <a class="mobile-nav-cta" href="contact.html">Inquire / Contact</a>
+  </div>
 
   <!-- PAGE HEADER -->
   <section class="page-header-section">
@@ -297,7 +297,7 @@
       }
     }
 
-    const savedTheme = localStorage.getItem("js_theme") || "dark";
+    const savedTheme = localStorage.getItem("js_theme") || "light";
     setTheme(savedTheme);
 
     themeToggleBtn.addEventListener("click", () => {
