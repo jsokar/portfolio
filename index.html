@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Dr. John Sokar, Ph.D. - Master Flutist, Music Educator, K-12 Licensed Teacher, Former Assistant Professor, and Music Technology Specialist.">
+  <meta name="description" content="Dr. John Sokar, Ph.D. - Master Flutist, Music Educator, K-12 Licensed Teacher, Former Assistant Professor, and Sound Engineering Specialist.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0c10'/%3E%3Ccircle cx='32' cy='32' r='28' fill='none' stroke='%23d4af37' stroke-width='2' stroke-dasharray='4 2'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Georgia,serif' font-size='24' font-weight='700' fill='%23d4af37'%3EJS%3C/text%3E%3C/svg%3E">
-  <title>John Sokar, Ph.D. | Music Educator, Flutist & Scholar</title>
+  <title>John Sokar, Ph.D. | Music Educator, Flutist & Sound Engineer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="css/shared.css">
 
   <style>
-    /* Home-Specific Styles */
     .hero-section {
       min-height: 85vh;
       display: flex;
@@ -171,11 +170,6 @@
       transition: transform 600ms ease;
     }
 
-    .portrait-frame:hover .portrait-inner img {
-      transform: scale(1.03);
-    }
-
-    /* Portal Grid */
     .portal-section {
       padding: 80px 0 100px;
     }
@@ -284,7 +278,7 @@
         <a class="nav-link active" href="index.html">Home</a>
         <a class="nav-link" href="dossier.html">Dossier</a>
         <a class="nav-link" href="pedagogy.html">Pedagogy</a>
-        <a class="nav-link" href="acoustics.html">Acoustics Lab</a>
+        <a class="nav-link" href="sound-engineering.html">Sound Engineering</a>
         <a class="nav-link" href="gallery.html">Gallery</a>
         <a class="nav-link" href="contact.html">Contact</a>
       </div>
@@ -317,15 +311,15 @@
           </h1>
 
           <p class="hero-bio">
-            A cross-cultural flutist, scholar, and music educator connecting European conservatory rigor, university leadership, K-12 classroom mastery, and creative music technology.
+            A cross-cultural flutist, scholar, and music educator connecting European conservatory rigor, university leadership, K-12 classroom mastery, and sound engineering expertise.
           </p>
 
           <div class="hero-actions">
             <a class="btn-primary" href="dossier.html">
               Explore Dossier →
             </a>
-            <a class="btn-secondary" href="acoustics.html">
-              🎶 Flute Acoustics Lab
+            <a class="btn-secondary" href="sound-engineering.html">
+              🎛️ Sound Engineering
             </a>
             <a class="btn-secondary" href="contact.html">
               Contact & Inquiries
@@ -369,7 +363,7 @@
       <div class="section-eyebrow">Explore Portfolios & Research</div>
       <h2 style="font-size:clamp(2rem, 4vw, 3rem); margin-bottom:12px;">Dedicated Sections</h2>
       <p style="color:var(--text-secondary); max-width:640px; margin-bottom:28px;">
-        Navigate directly to specialized pages covering academic credentials, pedagogy, interactive acoustics, and photo records.
+        Navigate directly to specialized pages covering academic credentials, pedagogy, sound engineering coursework, and photo records.
       </p>
 
       <div class="portal-grid">
@@ -393,14 +387,14 @@
           <span class="portal-link-text">Read Philosophy & Methods →</span>
         </a>
 
-        <!-- Card 3: Acoustics Lab -->
-        <a class="portal-card" href="acoustics.html">
+        <!-- Card 3: Sound Engineering -->
+        <a class="portal-card" href="sound-engineering.html">
           <div>
-            <div class="portal-icon">🎶</div>
-            <h3>Flute Acoustics Lab</h3>
-            <p>Interactive Web Audio flute tone synthesizer, harmonic overtones, real-time waveform visualizer, and acoustic research.</p>
+            <div class="portal-icon">🎛️</div>
+            <h3>Sound Engineering & Tech</h3>
+            <p>Formal sound engineering classes (recording & mixing), electronic instrument composition, DAWs, PA systems, and acoustic design.</p>
           </div>
-          <span class="portal-link-text">Launch Acoustics Lab →</span>
+          <span class="portal-link-text">Explore Sound Engineering →</span>
         </a>
 
         <!-- Card 4: Gallery -->
@@ -430,7 +424,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <b>John Sokar, Ph.D.</b> • Music Educator, Flutist & Scholar
+        <b>John Sokar, Ph.D.</b> • Music Educator, Flutist & Sound Engineer
       </div>
       <div>
         North Carolina, United States
@@ -449,7 +443,7 @@
       if (theme === "light") {
         themeIcon.innerHTML = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>`;
       } else {
-        themeIcon.innerHTML = `<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line>`;
+        themeIcon.innerHTML = `<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line>`;
       }
     }
 
