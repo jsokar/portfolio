@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Professional Gallery of Dr. John Sokar, Ph.D. - Classroom music teaching, live sound engineering, concert performances, and school assemblies.">
-  <title>Professional Gallery | Dr. John Sokar, Ph.D.</title>
+  <meta name="description" content="Photo Gallery of Dr. John Sokar, Ph.D. - Moments in music education, sound engineering, concerts, and campus life.">
+  <title>Gallery | Dr. John Sokar, Ph.D.</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,7 +46,7 @@
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      gap: 20px;
     }
 
     .gallery-card {
@@ -89,31 +89,22 @@
     }
 
     .gallery-meta {
-      padding: 18px 20px;
-      flex: 1;
+      padding: 14px 18px;
       display: flex;
-      flex-direction: column;
+      align-items: center;
       justify-content: space-between;
+      gap: 10px;
     }
 
     .gallery-caption {
-      font-size: 1.08rem;
+      font-size: 1.05rem;
       font-weight: 600;
       color: var(--text-primary);
-      margin-bottom: 6px;
-      line-height: 1.35;
-    }
-
-    .gallery-desc {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      line-height: 1.5;
-      margin-bottom: 14px;
+      margin: 0;
+      line-height: 1.3;
     }
 
     .gallery-tag {
-      display: inline-block;
-      align-self: flex-start;
       font-size: 0.72rem;
       font-weight: 700;
       color: var(--accent-gold);
@@ -123,6 +114,7 @@
       border-radius: var(--radius-sm);
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      white-space: nowrap;
     }
 
     /* Lightbox Modal */
@@ -155,29 +147,24 @@
     }
 
     .lightbox-content img {
-      max-height: 68vh;
+      max-height: 75vh;
       object-fit: contain;
       width: 100%;
       background: #000;
     }
 
     .lightbox-meta {
-      padding: 16px 22px;
+      padding: 14px 20px;
       background: var(--bg-card);
       border-top: 1px solid var(--border-subtle);
+      text-align: center;
     }
 
     .lightbox-title {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 600;
       color: var(--text-primary);
-      margin-bottom: 4px;
-    }
-
-    .lightbox-desc {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.5;
+      margin: 0;
     }
 
     .lightbox-close {
@@ -251,12 +238,12 @@
   <section class="page-header-section">
     <div class="container">
       <div class="breadcrumb">
-        <a href="index.html">Home</a> <span>/</span> <span>Professional Gallery</span>
+        <a href="index.html">Home</a> <span>/</span> <span>Gallery</span>
       </div>
-      <div class="section-eyebrow">Visual Evidence & Active Pedagogy</div>
-      <h1 class="page-title">Professional Gallery</h1>
+      <div class="section-eyebrow">Highlights & Moments</div>
+      <h1 class="page-title">Photo Gallery</h1>
       <p class="page-subtitle">
-        Curated photographic record of Dr. Sokar's classroom music instruction, live sound engineering, school assemblies, and concert performances.
+        A visual collection of moments from music teaching, live sound engineering, concert performances, and school activities.
       </p>
     </div>
   </section>
@@ -266,150 +253,120 @@
     <div class="container">
       <!-- Filter Buttons -->
       <div class="gallery-filter-bar">
-        <button class="gallery-filter-btn active" type="button" data-filter="all">All Highlights</button>
-        <button class="gallery-filter-btn" type="button" data-filter="sound">Sound Engineering & Tech</button>
-        <button class="gallery-filter-btn" type="button" data-filter="teaching">Classroom & School Leadership</button>
-        <button class="gallery-filter-btn" type="button" data-filter="concerts">Concerts & Performing Arts</button>
+        <button class="gallery-filter-btn active" type="button" data-filter="all">All</button>
+        <button class="gallery-filter-btn" type="button" data-filter="sound">Sound & Tech</button>
+        <button class="gallery-filter-btn" type="button" data-filter="teaching">Teaching & School</button>
+        <button class="gallery-filter-btn" type="button" data-filter="concerts">Concerts & Events</button>
       </div>
 
       <div class="gallery-grid">
-        <!-- 1. Live Sound Engineering (IMG_4798_2) -->
-        <div class="gallery-card" data-category="sound" onclick="openLightbox('assets/gallery/img_4798_2.jpg', 'Live Sound Mixing & Audio Engineering', 'Dr. Sokar actively engineering live audio reinforcement, signal routing, and acoustic calibration using AKG studio reference headphones, laptop DAW, tablet digital console, and rack hardware.')">
+        <!-- 1. Live Sound Mixing -->
+        <div class="gallery-card" data-category="sound" onclick="openLightbox('assets/gallery/img_4798_2.jpg', 'Live Sound Mixing')">
           <div class="gallery-img-wrap">
-            <img src="assets/gallery/img_4798_2.jpg" alt="Dr. Sokar Live Sound Engineering" loading="lazy">
+            <img src="assets/gallery/img_4798_2.jpg" alt="Live Sound Mixing" loading="lazy">
           </div>
           <div class="gallery-meta">
-            <div>
-              <div class="gallery-caption">Live Sound Mixing & Audio Engineering</div>
-              <p class="gallery-desc">Dr. Sokar actively engineering live audio reinforcement with reference headphones, DAW interfaces, and digital mixing racks.</p>
-            </div>
-            <span class="gallery-tag">Sound Engineering</span>
+            <h3 class="gallery-caption">Live Sound Mixing</h3>
+            <span class="gallery-tag">Sound</span>
           </div>
         </div>
 
-        <!-- 2. Music Technology Lab in Classroom (IMG_3706_2) -->
-        <div class="gallery-card" data-category="sound teaching" onclick="openLightbox('assets/gallery/img_3706_2.jpg', 'Classroom Music Technology Lab', 'Elementary students actively engaged in digital audio workstation and music technology lessons with headphones and laptops.')">
+        <!-- 2. Music Technology Lab -->
+        <div class="gallery-card" data-category="sound teaching" onclick="openLightbox('assets/gallery/img_3706_2.jpg', 'Music Technology Lab')">
           <div class="gallery-img-wrap">
-            <img src="assets/gallery/img_3706_2.jpg" alt="Music Technology Classroom Lab" loading="lazy">
+            <img src="assets/gallery/img_3706_2.jpg" alt="Music Technology Lab" loading="lazy">
           </div>
           <div class="gallery-meta">
-            <div>
-              <div class="gallery-caption">Classroom Music Technology Lab</div>
-              <p class="gallery-desc">Engaging elementary students with headphone-equipped digital audio workstations and interactive music software.</p>
-            </div>
-            <span class="gallery-tag">Music Technology</span>
+            <h3 class="gallery-caption">Music Technology Lab</h3>
+            <span class="gallery-tag">Classroom</span>
           </div>
         </div>
 
-        <!-- 3. Jones Dairy Elementary School Assembly (IMG_3859_2) -->
-        <div class="gallery-card" data-category="teaching concerts" onclick="openLightbox('assets/gallery/img_3859_2.jpg', 'Jones Dairy Elementary School Assembly', 'The full student body gathered in the auditorium under the JDE banner for an interactive cultural music and arts performance.')">
+        <!-- 3. School Assembly -->
+        <div class="gallery-card" data-category="teaching concerts" onclick="openLightbox('assets/gallery/img_3859_2.jpg', 'School Assembly')">
           <div class="gallery-img-wrap">
-            <img src="assets/gallery/img_3859_2.jpg" alt="Jones Dairy Elementary School Assembly" loading="lazy">
+            <img src="assets/gallery/img_3859_2.jpg" alt="School Assembly" loading="lazy">
           </div>
           <div class="gallery-meta">
-            <div>
-              <div class="gallery-caption">Jones Dairy Elementary Assembly</div>
-              <p class="gallery-desc">School-wide arts assembly and cultural music performance in the Jones Dairy Elementary (JDE) auditorium.</p>
-            </div>
-            <span class="gallery-tag">School Leadership</span>
+            <h3 class="gallery-caption">School Assembly</h3>
+            <span class="gallery-tag">Events</span>
           </div>
         </div>
 
-        <!-- 4. Music Classroom with Teaching Displays (IMG_1772) -->
-        <div class="gallery-card" data-category="teaching" onclick="openLightbox('assets/gallery/img_1772.jpg', 'In the Music Education Classroom', 'Dr. Sokar in the active music classroom equipped with digital keyboards, grand staff wall banner, and interactive instructional displays.')">
+        <!-- 4. Music Classroom -->
+        <div class="gallery-card" data-category="teaching" onclick="openLightbox('assets/gallery/img_1772.jpg', 'Music Classroom')">
           <div class="gallery-img-wrap">
-            <img src="assets/gallery/img_1772.jpg" alt="Music Education Classroom" loading="lazy">
+            <img src="assets/gallery/img_1772.jpg" alt="Music Classroom" loading="lazy">
           </div>
           <div class="gallery-meta">
-            <div>
-              <div class="gallery-caption">In the Music Education Classroom</div>
-              <p class="gallery-desc">Inside the public school music room featuring keyboard stations, Orff instrumentarium, and interactive instructional displays.</p>
-            </div>
-            <span class="gallery-tag">Classroom Instruction</span>
+            <h3 class="gallery-caption">Music Classroom</h3>
+            <span class="gallery-tag">Teaching</span>
           </div>
         </div>
 
-        <!-- 5. Educational Collaboration & Faculty (IMG_0251) -->
-        <div class="gallery-card" data-category="teaching" onclick="openLightbox('assets/gallery/img_0251.jpg', 'Educational Collaboration on Campus', 'Collaborating with school leadership and academic colleagues on campus arts initiatives at Jones Dairy Elementary.')">
+        <!-- 5. Campus Colleague -->
+        <div class="gallery-card" data-category="teaching" onclick="openLightbox('assets/gallery/img_0251.jpg', 'Campus Colleague')">
           <div class="gallery-img-wrap">
-            <img src="assets/gallery/img_0251.jpg" alt="School Leadership and Faculty Colleague" loading="lazy">
+            <img src="assets/gallery/img_0251.jpg" alt="Campus Colleague" loading="lazy">
           </div>
           <div class="gallery-meta">
-            <div>
-              <div class="gallery-caption">Educational Collaboration</div>
-              <p class="gallery-desc">Working alongside school leadership and teaching faculty on school-wide arts initiatives at Jones Dairy Elementary.</p>
-            </div>
-            <span class="gallery-tag">School Leadership</span>
+            <h3 class="gallery-caption">Campus Colleague</h3>
+            <span class="gallery-tag">School</span>
           </div>
         </div>
 
-        <!-- 6. Studio Workspace & Desk (IMG_3717_2) -->
-        <div class="gallery-card" data-category="sound" onclick="openLightbox('assets/gallery/img_3717_2.jpg', 'Music Studio & Production Workspace', 'Dr. Sokar\'s studio workspace featuring reference headphones and custom Dr. Sokar studio planter.')">
+        <!-- 6. Studio Workspace -->
+        <div class="gallery-card" data-category="sound" onclick="openLightbox('assets/gallery/img_3717_2.jpg', 'Studio Workspace')">
           <div class="gallery-img-wrap">
-            <img src="assets/gallery/img_3717_2.jpg" alt="Dr. Sokar Music Studio Workspace" loading="lazy">
+            <img src="assets/gallery/img_3717_2.jpg" alt="Studio Workspace" loading="lazy">
           </div>
           <div class="gallery-meta">
-            <div>
-              <div class="gallery-caption">Music Studio & Production Desk</div>
-              <p class="gallery-desc">Personal studio workspace featuring audio reference monitoring headphones and music curriculum materials.</p>
-            </div>
-            <span class="gallery-tag">Sound Engineering</span>
+            <h3 class="gallery-caption">Studio Workspace</h3>
+            <span class="gallery-tag">Studio</span>
           </div>
         </div>
 
-        <!-- 7. Post-Concert Celebration (IMG_7314) -->
-        <div class="gallery-card" data-category="concerts teaching" onclick="openLightbox('assets/gallery/img_7314.jpg', 'School Concert Celebration', 'Celebrating the successful conclusion of a school musical performance and ensemble concert with flowers.')">
+        <!-- 7. Concert Celebration -->
+        <div class="gallery-card" data-category="concerts teaching" onclick="openLightbox('assets/gallery/img_7314.jpg', 'Concert Celebration')">
           <div class="gallery-img-wrap">
-            <img src="assets/gallery/img_7314.jpg" alt="Post-Concert Celebration with Flowers" loading="lazy">
+            <img src="assets/gallery/img_7314.jpg" alt="Concert Celebration" loading="lazy">
           </div>
           <div class="gallery-meta">
-            <div>
-              <div class="gallery-caption">Concert Performance Celebration</div>
-              <p class="gallery-desc">Celebrating following a school concert and ensemble showcase with music students and supporters.</p>
-            </div>
-            <span class="gallery-tag">Concerts & Repertoire</span>
+            <h3 class="gallery-caption">Concert Celebration</h3>
+            <span class="gallery-tag">Concerts</span>
           </div>
         </div>
 
-        <!-- 8. Broadway Musical Theater Attendance (IMG_1922) -->
-        <div class="gallery-card" data-category="concerts" onclick="openLightbox('assets/gallery/img_1922.jpg', 'Broadway Musical & Performing Arts', 'Attending the Broadway touring production of Funny Girl at the performing arts center.')">
+        <!-- 8. Musical Theatre -->
+        <div class="gallery-card" data-category="concerts" onclick="openLightbox('assets/gallery/img_1922.jpg', 'Musical Theatre')">
           <div class="gallery-img-wrap">
-            <img src="assets/gallery/img_1922.jpg" alt="Broadway Musical Theater Attendance" loading="lazy">
+            <img src="assets/gallery/img_1922.jpg" alt="Musical Theatre" loading="lazy">
           </div>
           <div class="gallery-meta">
-            <div>
-              <div class="gallery-caption">Musical Theatre & Performing Arts</div>
-              <p class="gallery-desc">Engaging with professional theatrical productions, Broadway touring musicals, and stage repertoire.</p>
-            </div>
-            <span class="gallery-tag">Performing Arts</span>
+            <h3 class="gallery-caption">Musical Theatre</h3>
+            <span class="gallery-tag">Arts</span>
           </div>
         </div>
 
-        <!-- 9. Symphony Concert Attendance (IMG_9518) -->
-        <div class="gallery-card" data-category="concerts" onclick="openLightbox('assets/gallery/img_9518.jpg', 'Symphonic Concert Attendance', 'Attending orchestral and symphonic performances in the auditorium with concert programs.')">
+        <!-- 9. Symphony Concert -->
+        <div class="gallery-card" data-category="concerts" onclick="openLightbox('assets/gallery/img_9518.jpg', 'Symphony Concert')">
           <div class="gallery-img-wrap">
-            <img src="assets/gallery/img_9518.jpg" alt="Symphony Concert Attendance" loading="lazy">
+            <img src="assets/gallery/img_9518.jpg" alt="Symphony Concert" loading="lazy">
           </div>
           <div class="gallery-meta">
-            <div>
-              <div class="gallery-caption">Symphonic Repertoire & Concerts</div>
-              <p class="gallery-desc">Attending symphonic performances and classical repertoire programs in North Carolina.</p>
-            </div>
-            <span class="gallery-tag">Concerts & Repertoire</span>
+            <h3 class="gallery-caption">Symphony Concert</h3>
+            <span class="gallery-tag">Concerts</span>
           </div>
         </div>
 
-        <!-- 10. Dr. John Sokar Portrait (john_sokar) -->
-        <div class="gallery-card" data-category="concerts teaching" onclick="openLightbox('assets/gallery/john_sokar.jpg', 'Dr. John Sokar, Ph.D.', 'Doctor of Philosophy in Music Education (Hannover), Master Flutist, and North Carolina Licensed Educator.')">
+        <!-- 10. Dr. John Sokar Portrait -->
+        <div class="gallery-card" data-category="concerts teaching" onclick="openLightbox('assets/gallery/john_sokar.jpg', 'Dr. John Sokar')">
           <div class="gallery-img-wrap">
-            <img src="assets/gallery/john_sokar.jpg" alt="Dr. John Sokar Portrait" loading="lazy">
+            <img src="assets/gallery/john_sokar.jpg" alt="Dr. John Sokar" loading="lazy">
           </div>
           <div class="gallery-meta">
-            <div>
-              <div class="gallery-caption">Dr. John Sokar, Ph.D.</div>
-              <p class="gallery-desc">Flutist, scholar, and music educator bridging international conservatory rigor and modern instructional practice.</p>
-            </div>
-            <span class="gallery-tag">Professional Portrait</span>
+            <h3 class="gallery-caption">Dr. John Sokar</h3>
+            <span class="gallery-tag">Portrait</span>
           </div>
         </div>
       </div>
@@ -422,8 +379,7 @@
       <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close Lightbox">✕</button>
       <img id="lightboxImg" src="" alt="Enlarged gallery view">
       <div class="lightbox-meta">
-        <div class="lightbox-title" id="lightboxTitle"></div>
-        <div class="lightbox-desc" id="lightboxDesc"></div>
+        <h3 class="lightbox-title" id="lightboxTitle"></h3>
       </div>
     </div>
   </div>
@@ -488,12 +444,10 @@
     const lightboxModal = document.getElementById("lightboxModal");
     const lightboxImg = document.getElementById("lightboxImg");
     const lightboxTitle = document.getElementById("lightboxTitle");
-    const lightboxDesc = document.getElementById("lightboxDesc");
 
-    function openLightbox(src, title = "", desc = "") {
+    function openLightbox(src, title = "") {
       lightboxImg.src = src;
       lightboxTitle.textContent = title;
-      lightboxDesc.textContent = desc;
       lightboxModal.classList.add("active");
       document.body.style.overflow = "hidden";
     }
